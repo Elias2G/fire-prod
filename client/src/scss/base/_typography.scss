@@ -1,0 +1,89 @@
+// main: ../index.scss
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  padding: 0;
+  margin: 0;
+}
+
+a, li, p, em, label  {
+  font-size: $font-size;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.6rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+h5 {
+  font-size: 1.4rem;
+}
+h6 {
+  font-size: 1.2rem;
+}
+
+a {
+  @include transition();
+
+  &:active {
+    color: none;
+  }
+}
+
+
+// text transformations
+.thin {
+  font-weight: 100 !important;
+}
+.light {
+  font-weight: 300 !important;
+}
+.regular {
+  font-weight: 400 !important;
+}
+.medium {
+  font-weight: 500 !important;
+}
+.bold {
+  font-weight: 700 !important;
+}
+.black {
+  font-weight: 900 !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
+}
+
+// align classes
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+.align-justify {
+  text-align: justify;
+}
+.align-justify-center {
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+.break-all {
+  word-break: break-all;
+}

@@ -1,0 +1,45 @@
+//main: ../index.scss
+
+.btn {
+  @include transition();
+  @extend .uppercase;
+  $padding-tb: 10px;
+  display: inline-block;
+  padding: $padding-tb 24px;
+  color: $color-primary;
+  &-pos-right {
+    @extend .btn;
+    background-color: $color-secondary;
+    color: white;
+    width: 100px;
+    margin-left: auto;
+    &:hover {
+      background-color: $color-secondary;
+      opacity: 0.9;
+    }
+    a {
+      color: white;
+    }
+  }
+
+  &-border {
+    @extend .btn;
+    $border: 2px solid $color-primary;
+    border: $border;
+    background-color: transparent;
+
+    &-rounded {
+      @extend .btn-border;
+      border-radius: 6px;
+    }
+
+    &-rounded-full {
+      @extend .btn-border;
+      border-radius: ($padding-tb) * 2 + $font-size;
+    }
+    &:hover {
+      background-color: $color-primary-dark;
+      color: white;
+    }
+  }
+}

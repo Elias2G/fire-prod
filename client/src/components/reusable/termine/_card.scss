@@ -1,0 +1,29 @@
+// main: ../../../scss/index.scss
+
+.termin-card {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  .row {
+    .column {
+      .placeholder_img {
+        height: 100px;
+        background-color: #2b2b2b;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.23);
+    transition: 200ms;
+  }
+}
+
+.termine{
+  padding:10px;
+  color: black;
+
+span{
+  font-size: 25pt;
+  color:$color-primary-dark;
+  }
+}

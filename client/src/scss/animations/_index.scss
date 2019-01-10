@@ -1,0 +1,14 @@
+// main: ../index.scss
+
+.closed {
+  @include animation('moveBottom .5s 1');
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode:    forwards;
+  animation-fill-mode:         forwards;
+}
+.open {
+  @include animation('moveTop .5s 1');
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode:    forwards;
+  animation-fill-mode:         forwards;
+}

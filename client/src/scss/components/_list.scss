@@ -1,0 +1,43 @@
+//main: ../index.scss
+
+.list {
+  padding-left: 20px;
+  li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: ($font-line-height-primary - $font-size) + 1px;
+    left: -16px;
+    background-color: $color-primary;
+    border-radius: 50%;
+  }
+
+  &-square {
+    @extend .list;
+    li::before {
+      border-radius: 0;
+    }
+  }
+
+  &-ordered {
+    counter-reset: test;
+    @extend .list;
+    li {
+      padding-top: 1px;
+      b {
+        color: $color-primary;
+      }
+    }
+    li::before {
+      @extend .bold;
+      top: 1px;
+      width: 10px;
+      height: 10px;
+      content: counter(test, decimal) ".";
+      counter-increment: test;
+      background-color: transparent;
+      color: $color-primary;
+    }
+  }
+}

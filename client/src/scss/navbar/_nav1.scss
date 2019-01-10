@@ -1,0 +1,150 @@
+//main: ../index.scss
+
+.nav {
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  background-color: white;
+  z-index: 99999999;
+
+  .mobile {
+    background-color: white;
+    border-bottom: 1px solid $color-primary-light;
+
+    .nav-icon {
+      background-color: black;
+      width: 25px;
+      height: 2px;
+      &:before {
+        @extend .nav-icon;
+        content: "";
+        display: block;
+        margin-top: -8px;
+      }
+      &:after {
+        @extend .nav-icon;
+        content: "";
+        display: block;
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .nav-menü {
+    position: fixed;
+    background-color: white;
+    z-index:0;
+    height: 100vh;
+    right: 0;
+    &.true {
+      width: 100vw;
+      transition: 300ms;
+    }
+    &.false {
+      width: 0px;
+      overflow: hidden;
+      transition: 300ms;
+    }
+
+    .nav-item {
+      width: 100%;
+      border-bottom: 1px solid $color-primary-light;
+      padding: 15px;
+    }
+  }
+  p {
+    font-size: 13pt;
+    color: black;
+  }
+}
+
+
+
+
+
+// DROPWDOWN STYLES
+
+.dropDown {
+  .this {
+    &-true {
+      pointer-events: all;
+    }
+    &-false {
+      pointer-events: none;
+    }
+  }
+
+  .dropDownContainer {
+    overflow: hidden;
+    &.true {
+      height: 100%;
+      transition: 300ms;
+      opacity: 1;
+    }
+    &.false {
+      height: 0px;
+      transition: 300ms;
+      opacity: 0;
+    }
+  }
+
+  .dropContent {
+    padding-top: 15px;
+
+    .dropItem {
+      padding-left: 15px;
+    }
+  }
+}
+
+.activeLink {
+  p {
+    color: $color-secondary !important;
+  }
+}
+
+
+.desktop {
+  border-bottom: 1px solid #ebebeb;
+  padding-right: 100px;
+  .test {
+    padding: 0px 20px 0px 20px !important;
+    a p {
+      font-size: 1.3em;
+    }
+  }
+}
+
+.desktopDown {
+  &:hover {
+    .d-hidden {
+      visibility: visible;
+      opacity: 1;
+      transition: 200ms;
+      display: block;
+      z-index: 9999999999999999;
+    }
+  }
+  a p {
+    padding-left: 20px;
+    transition: 200ms;
+  }
+  .d-hidden {
+    width: 200px;
+    display: block;
+    z-index: 9999999999999999;
+    background: white;
+    padding: 20px 20px 0px 20px;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: 200ms;
+    a p {
+      padding-bottom: 20px;
+      &:hover {
+        color: grey;
+        transition: 200ms;
+      }
+    }
+  }
+}

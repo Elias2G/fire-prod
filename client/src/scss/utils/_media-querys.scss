@@ -1,0 +1,26 @@
+// main: ../index.scss
+
+$start: '(min-width: 200px)';
+$small: '(min-width: 420px)';
+$medium-small: '(min-width: 576px)';
+$medium: '(min-width: 768px)';
+$medium-large: '(min-width: 992px)';
+$large: '(min-width: 1200px)';
+$extra-large: '(min-width: 1600px)';
+
+$media-list:
+  ($start, 's'),
+  ($medium-small, 'ms'),
+  ($medium, 'md'),
+  ($medium-large, 'ml'),
+  ($large, 'lg');
+
+@mixin respond-to($media) {
+  @if $media == 'no' {
+    @content;
+  } @else {
+    @media all and #{$media} {
+      @content;
+    }
+  }
+}

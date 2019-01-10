@@ -1,0 +1,16 @@
+// main: ../index.scss
+
+.overflow-scroll {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #cecece;
+}
+
+::-webkit-scrollbar-thumb {
+  @extend .shadow;
+  background-color: $color-primary;
+  border-radius: 4px;
+}

@@ -1,0 +1,22 @@
+// main: ../index.scss
+.card {
+  @extend .shadow;
+  background-color: white;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+
+  &-primary {
+    @extend .card;
+    background-color: $color-primary;
+  }
+  &-secondary {
+    @extend .card;
+    background-color: $color-secondary;
+  }
+  &-tertiary {
+    @extend .card;
+    background-color: $color-tertiary;
+  }
+}

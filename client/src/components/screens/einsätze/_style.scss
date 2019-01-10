@@ -1,0 +1,71 @@
+//main: ../../../scss/index.scss
+
+.red-title-bg {
+  background-color: $color-secondary;
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.einsatz-card-full {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  .einsatz-card-title {
+    background-color: white;
+    height: auto;
+    padding: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.einsatz-info-container {
+  overflow: hidden;
+  background-color: white;
+  transition: 300ms;
+  padding: 20px;
+  height: 100%;
+
+  &.e-closed {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: 200ms;
+  }
+  &.e-open {
+    overflow: hidden;
+    height: auto;
+    padding: 20px;
+    transition: 300ms;
+    border-top: 1px solid #ebebeb;
+  }
+}
+
+.image-icon {
+  width: 30px;
+  height: auto;
+}
+
+
+.opener {
+  &:after {
+    display: block;
+    content: "+";
+    position: absolute;
+    right: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+}
+.closer {
+  &:after {
+    display: block;
+    content: "-";
+    position: absolute;
+    right: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+}

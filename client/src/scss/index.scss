@@ -1,0 +1,85 @@
+@import "utils/mixins";
+@import "utils/media-querys";
+@import "utils/variables";
+
+@import "base/base";
+@import "base/normalize";
+@import "base/typography";
+@import "base/colors";
+
+@import "layout/flexbox";
+@import "layout/grid";
+@import "layout/basic-layouts";
+
+@import "singleStyles/shadows";
+@import "singleStyles/scrollable";
+
+@import "components/list";
+@import "components/btn";
+@import "components/card";
+@import "components/form";
+@import "components/footer";
+// @import "components/nav";
+
+@import "exo/exo";
+
+@import "navbar/nav1";
+
+@import "animations/index";
+@import "animations/keyframes";
+
+
+@import "../components/reusable/einsätze/card";
+@import "../components/reusable/news/card";
+@import "../components/reusable/termine/card";
+@import "../components/reusable/under-nav/under-nav";
+@import "../components/screens/mannschaft/card";
+@import "../components/screens/termine/card";
+@import "../components/screens/notruf/index";
+@import "../components/screens/einsätze/style";
+@import "../components/screens/statistic/stats";
+@import "../components/screens/kontakt/index";
+@import "../components/screens/geschichte/index";
+@import "../components/screens/fahrzeuge/index";
+@import "../components/screens/news/card";
+
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.head_image {
+  width: 100%;
+  min-height: 30vh;
+  background-color: #2b2b2b;
+}
+
+p {
+  font-size: 15px;
+  @include respond-to($medium) {
+    font-size: 20px;
+  }
+}
+
+.under-nav {
+  top: 65px;
+  border-top: 1px solid #ebebeb !important;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 9999999;
+
+  @include respond-to($medium) {
+    top: 80px;
+    z-index: 9999;
+  }
+  @include respond-to($medium-large) {
+    padding-top: 7px;
+    top: 70px;
+    z-index: 9999;
+  }
+}
+
+.rw-main{
+  background: $color-secondary !important;
+}

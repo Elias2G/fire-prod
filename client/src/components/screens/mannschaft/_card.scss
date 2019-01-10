@@ -1,0 +1,55 @@
+//main: ../../../scss/index.scss
+
+.team-card {
+  width: 100%;
+  height: auto;
+  background-color: white;
+
+  .rounded-container {
+    width: 150px;
+    height: 150px;
+    background-color: $color-primary-dark;
+    border-radius: 0%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    .team-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.index {
+  z-index: 20;
+  &.shadow {
+    @include respond-to($small) {
+      box-shadow: none;
+      border: 0.1px solid #fafafa;
+    }
+  }
+}
+
+.shadow-land {
+  @include respond-to($small) {
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+  }
+}
+
+.abzeichen{
+  background-color:white;
+  cursor:pointer;
+  color:black;
+  &:hover{
+    color: $color-secondary;
+  }
+}
+
+.abzeichenBilder{
+  height:50px;
+  width: 50px;
+  float:left;
+  display:block;
+  margin:10px;
+}

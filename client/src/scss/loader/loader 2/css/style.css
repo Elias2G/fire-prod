@@ -1,0 +1,33 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(209, 92, 116);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.loader div {
+  position: absolute;
+  height: 25px;
+  width: 8px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  animation: move 1s ease-in-out 0.2s infinite;
+}
+.loader .e1 {
+  left: 35%;
+  animation-delay: 0s;
+}
+.loader .e3 {
+  left: 65%;
+  animation-delay: 0.4s;
+}
+
+@keyframes move {
+  0% {transform: translate(-50%, -10%);}
+  50% {transform: translate(-50%, -90%);}
+}

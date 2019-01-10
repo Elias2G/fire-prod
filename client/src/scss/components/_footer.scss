@@ -1,0 +1,36 @@
+// main: ../index.scss
+
+.behindFooter{
+  background-color: $color-primary-dark;
+  color: white;
+  & p{
+    line-height: 18pt;
+    color:white;
+  }
+}
+
+.footerHeading{
+  font-weight: bold;
+  font-size: 14pt;
+  padding-bottom: 10px;
+}
+
+.wetter{
+  background-color: $color-primary-light;
+  height:150px;
+}
+
+.links{
+  color:white;
+  font-size: 15pt;
+  &:hover{
+  color: $color-secondary;
+  }
+  a{
+    color: white;
+    font-size: 1em;
+    }
+  a:hover{
+    color: $color-secondary;
+  }
+}

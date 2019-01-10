@@ -1,0 +1,25 @@
+// main: ../../../scss/index.scss
+.heading{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.secondHeading{
+  padding-top:40px;
+}
+
+span{
+  color:$color-secondary;
+}
+.container.shadow {
+  transition: 200ms;
+  &:hover{
+  background-color: $color-secondary;
+  color:white;
+  transition: 200ms;
+}
+}
+
+p{
+  font-size: 15px;
+}
