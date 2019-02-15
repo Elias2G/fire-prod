@@ -22,18 +22,27 @@ export default class TermineCard extends Component{
     }
     return (
       array.map((data, i) => (
-
-          <div className="row team-card shadow index">
-            <div className="col-lg-3 col-md-3 terminBild shadow-big">
-              <img className="team-img" src={data.Bildverzeichnis}/>
-            </div>
-            <div className="col-lg-9 col-md-9 container">
-              <h5 className="break-all align-center">{data.Bezeichnung}</h5>
-              <h6 className="align-center primary-light">
-                {data.Datum}
-              </h6>
+        <div className="column col-md-4 col-lg-3">
+          <div className="news-card shadow">
+            <img className="placeholder_img" src={data.Bildverzeichnis} />
+            <div className="container">
+              <p className="bold">{data.Bezeichnung}</p>
+              <p className="primary-light date-size">{
+                data.Datum.substring(8,10) + '.' +
+                data.Datum.substring(5,7) + '.' +
+                data.Datum.substring(0,4)
+              }</p>
+              <p className="container nopr nopl">
+                asdf ahahg dkj fojas asdjg asg asödhgja hashdjh ah
+                dj ahd öasdg h ajsdhg  hlasjdhgj ahd hasjdgh
+                asdf ahahg dkj fojas asdjg asg asödhgja hashdjh ah
+                dj ahd öasdg h ajsdhg  hlasjdhgj ahd hasjdgh
+                asdf ahahg dkj fojas asdjg asg asödhgja hashdjh ah
+                dj ahd öasdg h ajsdhg  hlasjdhgj ahd hasjdgh
+              </p>
             </div>
           </div>
+        </div>
 
         )
       )
@@ -43,8 +52,8 @@ export default class TermineCard extends Component{
   render() {
     const { data, length } = this.props;
     return (
-      <div className="container-big">
-        <div className="row shadow-land">
+      <div className="container-big nop">
+        <div className="row">
           {this.renderHelper(data, length)}
         </div>
       </div>

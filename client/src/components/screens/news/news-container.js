@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetch } from '../../../redux/actions';
 import { ROOT_URL, getNews } from '../../../config';
 
-import {Card} from './card';
+import Card from './card';
 
 class Container extends Component {
 
@@ -17,7 +17,6 @@ class Container extends Component {
   renderHelper = (loadedItems, data) => {
     return data.map((data, i) => {
       if(i < loadedItems) {
-        console.log(i);
         return (
           <div className="column col-md-4 col-lg-3">
             <Card key={i} data={data} />

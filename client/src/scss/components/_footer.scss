@@ -5,7 +5,6 @@
   color: white;
   & p{
     line-height: 18pt;
-    color:white;
   }
 }
 
@@ -22,7 +21,7 @@
 
 .links{
   color:white;
-  font-size: 15pt;
+  font-size: 20px;
   &:hover{
   color: $color-secondary;
   }
@@ -33,4 +32,19 @@
   a:hover{
     color: $color-secondary;
   }
+}
+
+.footer-light-l {
+  font-size: 0.9em;
+  color: $color-primary-light;
+}
+
+.footer-b {
+  &-b {
+    border-bottom: 1px solid $color-tertiary-dark;
+  }
+  &-r {
+    border-right: 1px solid $color-tertiary-dark;
+  }
+
 }

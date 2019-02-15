@@ -89,7 +89,7 @@ class EinsatzContainer extends Component {
     var { arrayYear } = this.filterHelper(einsätze);
 
     return (
-      <div className="row">
+      <div className="row container-big nopt">
         {this.renderHelper(arrayYear)}
         {this.renderPortal(einsätze, this.handleClick)}
       </div>

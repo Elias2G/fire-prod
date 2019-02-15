@@ -11,7 +11,7 @@
 span{
   color:$color-secondary;
 }
-.container.shadow {
+.container .nHover {
   transition: 200ms;
   &:hover{
   background-color: $color-secondary;
@@ -20,6 +20,6 @@ span{
 }
 }
 
-p{
-  font-size: 15px;
+.title-border-b {
+  border-bottom: 1px solid #ebebeb;
 }

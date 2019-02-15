@@ -1,12 +1,9 @@
-// main: ../../../scss/index.scss
-.terminBild{
-    max-width: 300px;
-    height: 200px;
-    background-color: $color-primary-dark;
-    left:0
-}
-.team-card {
-  width: 100%;
-  height: auto;
+//main: ../../../scss/index.scss
+
+.news-card {
   background-color: white;
+}
+
+.date-size {
+  font-size: 0.9em;
 }

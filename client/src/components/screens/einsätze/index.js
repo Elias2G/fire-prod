@@ -20,7 +20,7 @@ class Einsätze extends Component {
         <img className="head_image coantainer-big" />
 
         <div className="container-big">
-          <h1 className="col-s-12">Einsätze</h1>
+          <h1 className="container-big">Einsätze</h1>
 
           <EinsatzContainer />
         </div>

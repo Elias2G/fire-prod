@@ -14,6 +14,16 @@ export default class MannschaftCard extends Component {
     })
   }
 
+  split = (data) => {
+
+    if(data !== undefined) {
+      return data.map(data => {
+        return data + ', ';
+      })
+    }
+
+  }
+
   render() {
     const data = this.props.data;
     return (
@@ -24,15 +34,15 @@ export default class MannschaftCard extends Component {
         <div className="container">
           <h5 className="break-all align-center">{data.Name}</h5>
           <h6 className="align-center primary-light">
-            {data.Dienstgradbez}
+            {data.Bez}
           </h6>
         </div>
         <div className="container">
           <p className="align-center">
-
+            {this.split(data.Funktion)}
           </p>
         </div>
-        <Abzeichen />
+        {/* <Abzeichen /> */}
       </div>
     );
   }

@@ -10,11 +10,24 @@ import MannschaftContainer from './cardLoop';
 
 class Mannschaft extends Component {
   componentDidMount() {
-    this.props.fetch('fetch_mannschaft_d', `${ROOT_URL}${getDienstgrad}`);
-    this.props.fetch('fetch_mannschaft_f', `${ROOT_URL}${getFunktionen}`);
+    if(this.props.data.loaded.loaded.Mannschaft === false) {
+      this.props.fetch('fetch_mannschaft_f', `${getFunktionen}`);
+      this.props.fetch('fetch_mannschaft_d', `${getDienstgrad}`);
+    }
+  }
+
+  createStructure = (mannschaft) => {
+    if(this.props.data.loaded.loaded.Mannschaft === true) {
+
+
+      return;
+    }
   }
 
   render() {
+
+    var gesamt = this.createStructure(this.props.data.mannschaft);
+
     return (
       <div>
         <img className="head_image coantainer-big" />
@@ -23,7 +36,9 @@ class Mannschaft extends Component {
           <h1>Mannschaft</h1>
         </div>
 
-        <MannschaftContainer data={this.props.data.mannschaft}/>
+        {
+          this.props.data.loaded.loaded.Mannschaft === true ? <MannschaftContainer data={this.props.data.mannschaft} /> : <div></div>
+        }
 
       </div>
     );

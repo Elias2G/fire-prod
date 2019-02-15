@@ -1,8 +1,71 @@
 // main: ../../../scss/index.scss
 
-.geschichteList{
-  list-style: circle;
-  ul li{
-    font-size: 14pt;
+
+.timeline-container {
+  box-sizing: border-box;
+  .timeline-item {
+
+    .left {
+      position: absolute;
+      top: 48px;
+      left: 5px;
+      width: 137px;
+      z-index: 999;
+
+      .timeline-dot {
+        &:after {
+          content: " ";
+          width: 20px;
+          height: 20px;
+          background: white;
+          border: 4px solid $color-secondary;
+          border-radius: 100%;
+          position: absolute;
+          right: 0;
+          display: none;
+          @include respond-to($medium) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .right {
+      padding-left: 20%;
+
+    }
+
+    .timeline-card {
+      padding: 40px;
+      border-left: 4px solid $color-secondary;
+    }
   }
+}
+
+.timeline-ab {
+  padding-top: 20px;
+}
+
+.pd {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.story-images {
+  div {
+    overflow: hidden;
+    height: 100px;
+    @include respond-to($medium) {
+      height: 170px;
+    }
+    @include respond-to($large) {
+      height: 210px;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
 }

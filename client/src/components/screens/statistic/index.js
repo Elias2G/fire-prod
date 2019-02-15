@@ -21,7 +21,7 @@ class Statistic extends Component {
         <img className="head_image coantainer-big" />
 
         <div className="container-big">
-          <h1>Unsere Statistik im Überblick</h1>
+          <h1 className="container-big nopb">Unsere Statistik im Überblick</h1>
         </div>
         <div className="container-big">
           <Charts data={this.props.data.statistic}/>

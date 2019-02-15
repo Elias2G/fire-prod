@@ -58,9 +58,14 @@ export class Navigation extends Component {
             </NavLink>
           </div>
           <div className="nav-item">
+            <NavLink exact to='/neuigkeiten' onClick={this.handleClick} activeClassName="activeLink">
+              <p>Neuigkeiten</p>
+            </NavLink>
+          </div>
+          <div className="nav-item">
             <DropDown
-              data={["Mannschaft", "Fahrzeuge"]}
-              goTo={["/mannschaft", "/fahrzeuge"]}
+              data={["Mannschaft", "Fahrzeuge", "Geschichte"]}
+              goTo={["/mannschaft", "/fahrzeuge", "/geschichte"]}
               function={this.handleClick}
             />
           </div>
@@ -82,6 +87,16 @@ export class Navigation extends Component {
               goTo={["/kontakt", "/notruf"]}
               function={this.handleClick}
             />
+          </div>
+          <div className="nav-item">
+            <NavLink exact to='/impressum' onClick={this.handleClick} activeClassName="activeLink">
+              <p>Impressum</p>
+            </NavLink>
+          </div>
+          <div className="nav-item">
+            <NavLink exact to='/datenschutz' onClick={this.handleClick} activeClassName="activeLink">
+              <p>Datenschutz</p>
+            </NavLink>
           </div>
         </div>
         </>
@@ -112,6 +127,9 @@ export class Navigation extends Component {
                   <div className="d-hidden shadow-big">
                     <NavLink exact to='/fahrzeuge' onClick={this.handleClick} activeClassName="activeLink">
                       <p>Fahrzeuge</p>
+                    </NavLink>
+                    <NavLink exact to='/geschichte' onClick={this.handleClick} activeClassName="activeLink">
+                      <p>Geschichte</p>
                     </NavLink>
                   </div>
                 </div>
@@ -147,6 +165,16 @@ export class Navigation extends Component {
                     </NavLink>
                   </div>
                 </div>
+              </div>
+              <div className="column test">
+                <NavLink exact to='/impressum' onClick={this.handleClick} activeClassName="activeLink">
+                  <p>Impressum</p>
+                </NavLink>
+              </div>
+              <div className="column test">
+                <NavLink exact to='/datenschutz' onClick={this.handleClick} activeClassName="activeLink">
+                  <p>Datenschutz</p>
+                </NavLink>
               </div>
             </div>
           </div>

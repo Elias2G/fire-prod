@@ -20,10 +20,12 @@ class Termine extends Component {
       <div>
         <img className="head_image coantainer-big" />
 
-        <div className="container-big">
-          <h1>Termine</h1>
+        <div className="container-big nopb">
+          <h1 className="container-big">Termine</h1>
         </div>
+        <div className="container-big nopt">
           <TermineCard data={this.props.data.termine}/>
+        </div>
       </div>
     );
   }

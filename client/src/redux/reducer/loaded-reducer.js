@@ -1,4 +1,4 @@
-import { FETCH_TERMINE, FETCH_EINSAETZE, FETCH_NEWS } from '../actions/type';
+import { FETCH_TERMINE, FETCH_EINSAETZE, FETCH_NEWS, FETCH_MANNSCHAFT_D, FETCH_MANNSCHAFT_F } from '../actions/type';
 
 const initState =
     {
@@ -24,6 +24,8 @@ export default function(state = initState, action) {
       return  { loaded: { ...state.loaded, News: true } }
     case FETCH_TERMINE:
       return  { loaded: { ...state.loaded, Termine: true } }
+    case FETCH_MANNSCHAFT_F:
+      return { loaded: { ...state.loaded, Mannschaft: true } }
     default:
       return state;
   }

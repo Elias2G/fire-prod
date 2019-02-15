@@ -33,6 +33,7 @@
 @import "../components/reusable/news/card";
 @import "../components/reusable/termine/card";
 @import "../components/reusable/under-nav/under-nav";
+@import "../components/reusable/gallery/index";
 @import "../components/screens/mannschaft/card";
 @import "../components/screens/termine/card";
 @import "../components/screens/notruf/index";
@@ -54,10 +55,7 @@
 }
 
 p {
-  font-size: 15px;
-  @include respond-to($medium) {
-    font-size: 20px;
-  }
+  font-size: 0.9em;
 }
 
 .under-nav {

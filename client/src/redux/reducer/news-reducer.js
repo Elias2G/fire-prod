@@ -4,121 +4,121 @@ const initState = [
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
     {
         Bezeichnung: "Übung",
         Datum: "2008-12-12",
-        Bilderverzeichnis: null,
+        Bilderverzeichnis: 'test.jpg',
         Beschreibung: 'testetset stet test stets est'
     },
   ]
