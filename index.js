@@ -6,7 +6,7 @@ var app = express();
 
 var pool = mysql.createPool({
   connectionLimit: 100,
-  host: '142.93.97.32',
+  host: 'http://157.230.106.121',
   user: 'remote',
   password: 'Richtig_Sicher2019',
   database: 'ff-kappel',
@@ -32,7 +32,7 @@ var einsätze = "SELECT anwesenheit.Bilderverzeichnis, anwesenheit.Datum, anwese
 
 var akt_funktionen = "SELECT concat(Vorname, ' ', Zuname) AS Name, Funktion.Kürzel, Funktionskürzel.Bezeichnung, Funktion.Datum_anfang, Funktion.Datum_ende, Funktionskürzel.Rangordnung FROM Funktionskürzel INNER JOIN (Mannschaft INNER JOIN Funktion ON Mannschaft.`Paß-Nr`= Funktion.`Paß-Nr`) ON Funktionskürzel.Kürzel = Funktion.Kürzel GROUP BY Zuname,' ',Vorname , Funktion.Kürzel, Funktionskürzel.Bezeichnung, Funktion.Datum_anfang, Funktion.Datum_ende, Funktionskürzel.Rangordnung HAVING (((Count(Funktion.Datum_ende))=0)) ORDER BY Name";
 
-var aktueller_Dienstgrad = "SELECT mannschaft.`Paß-Nr`, concat(Vorname, ' ', Zuname) AS Name, dienstkürzel.Kürzel, dienstkürzel.Dienstgradbez, dienstgrad.Datum FROM (mannschaft INNER JOIN (dienstkürzel INNER JOIN dienstgrad ON (dienstkürzel.Kürzel = dienstgrad.Kürzel) AND (dienstkürzel.Kürzel = dienstgrad.Kürzel)) ON mannschaft.`Paß-Nr` = dienstgrad.`Paß-Nr`) INNER JOIN (SELECT dienstgrad.`Paß-Nr`, Max(dienstgrad.Datum) AS `Max von Datum` FROM mannschaft LEFT JOIN dienstgrad ON mannschaft.`Paß-Nr` = dienstgrad.`Paß-Nr` GROUP BY dienstgrad.`Paß-Nr`) akt_dienstgrad_ermitteln ON mannschaft.`Paß-Nr` = `akt_dienstgrad_ermitteln`.`Paß-Nr` GROUP BY mannschaft.`Paß-Nr`, Name, dienstkürzel.Kürzel, dienstkürzel.Dienstgradbez, dienstgrad.Datum, mannschaft.Status, `akt_dienstgrad_ermitteln`.`Max von Datum` HAVING (((dienstgrad.Datum) = `Max von Datum`)) ORDER BY Name";
+var aktueller_Dienstgrad = "SELECT mannschaft.`Paß-Nr`, concat(Vorname, ' ', Zuname) AS Name, dienstkürzel.Kürzel, dienstkürzel.Dienstgradbez, dienstkürzel.Reihung, dienstgrad.Datum FROM (mannschaft INNER JOIN (dienstkürzel INNER JOIN dienstgrad ON (dienstkürzel.Kürzel = dienstgrad.Kürzel) AND (dienstkürzel.Kürzel = dienstgrad.Kürzel)) ON mannschaft.`Paß-Nr` = dienstgrad.`Paß-Nr`) INNER JOIN (SELECT dienstgrad.`Paß-Nr`, Max(dienstgrad.Datum) AS `Max von Datum` FROM mannschaft LEFT JOIN dienstgrad ON mannschaft.`Paß-Nr` = dienstgrad.`Paß-Nr` GROUP BY dienstgrad.`Paß-Nr`) akt_dienstgrad_ermitteln ON mannschaft.`Paß-Nr` = `akt_dienstgrad_ermitteln`.`Paß-Nr` GROUP BY mannschaft.`Paß-Nr`, Name, dienstkürzel.Kürzel, dienstkürzel.Dienstgradbez, dienstgrad.Datum, mannschaft.Status, `akt_dienstgrad_ermitteln`.`Max von Datum` HAVING (((dienstgrad.Datum) = `Max von Datum`)) ORDER BY Name";
 
 const handle_database =  query => (req, res) => {
   pool.getConnection(function(err, connection) {
