@@ -6,11 +6,10 @@ var app = express();
 
 var pool = mysql.createPool({
   connectionLimit: 100,
-  host: '157.230.106.121',
+  host: '157.230.106.121:3306',
   user: 'remote',
   password: 'Richtig_Sicher2019',
   database: 'ff-kappel',
-  port: '3306',
   debug: false
 });
 
