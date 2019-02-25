@@ -15,6 +15,14 @@ var pool = mysql.createPool({
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'), function(err) {
+    if(err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
 const get = "/api/get/";
 
 var termine = "SELECT * from termine_online";
