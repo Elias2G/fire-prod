@@ -2,6 +2,7 @@
   "name": "ffkappel",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://157.230.106.121:8080",
   "dependencies": {
     "add": "^2.0.6",
     "axios": "^0.18.0",
