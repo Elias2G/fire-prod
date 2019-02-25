@@ -10,6 +10,7 @@ var pool = mysql.createPool({
   user: 'remote',
   password: 'Richtig_Sicher2019',
   database: 'ff-kappel',
+  port: '3306',
   debug: false
 });
 
