@@ -1,1 +1,51 @@
 //main: ../index.scss
+
+h3 {
+  &.exo {
+    background-color: white;
+    width: 200px;
+  }
+}
+
+h5 {
+  &.exo {
+    background-color: #2b2b2b;
+  }
+}
+
+h6 {
+  &.exo {
+    background-color: $color-primary;
+    color: $color-primary !important;
+    width: 70%;
+    margin-top: 5px;
+  }
+}
+
+p {
+  &.exo {
+    background-color: $color-primary;
+    color: $color-primary;
+    width: 50%;
+    margin-top: 5px;
+
+    span {
+      height: 16px !important;
+      font-size: 17px;
+      top: 0;
+
+      &.exo {
+        background-color: $color-primary;
+        color: $color-primary;
+        margin-bottom: 5px;
+        display: block;
+      }
+    }
+
+
+    &.termine {
+      height: 30px;
+    }
+  }
+
+}

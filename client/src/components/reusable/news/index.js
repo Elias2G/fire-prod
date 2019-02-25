@@ -17,7 +17,7 @@ class News extends Component {
       if(i < 4 && i !== 0) {
         return (
           <div className="column col-s-12 col-md-6 col-lg-12">
-            <Card data={data} classed="small-news" />
+            <Card data={data} classed="small-news" loaded={this.props.data.loaded.loaded.News} />
           </div>
         )
       }

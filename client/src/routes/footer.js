@@ -43,6 +43,7 @@ export class Footer extends Component{
                 <div className=" column col-s-6 col-md-4 footer-b-b">
                   <p><span className="links"><NavLink to="/mannschaft">Mannschaft</NavLink></span></p>
                   <p><span className="links"><NavLink to="/fahrzeuge">Fahrzeuge</NavLink></span></p>
+                  <p><span className="links"><NavLink to="/geschichte">Geschichte</NavLink></span></p>
                 </div>
                 <div className=" column col-s-6 col-md-4 footer-b-b">
                   <p><span className="links"><NavLink to="/einsätze">Einsätze</NavLink></span></p>

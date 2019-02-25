@@ -4,7 +4,15 @@ import { determine } from '../actions';
 
 const initState = [
     {
-        Titel: "Übung",
+        Bezeichnung: "Übung",
+        Datum: '2008-12-12',
+    },
+    {
+        Bezeichnung: "Übung",
+        Datum: '2008-12-12',
+    },
+    {
+        Bezeichnung: "Übung",
         Datum: '2008-12-12',
     }
   ]

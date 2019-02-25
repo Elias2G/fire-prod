@@ -10,8 +10,8 @@ export const Card = (props) => (
         </div>
       </div>
       <div className="column col-s-10">
-        <h5 className="bold exo">{props.title}</h5>
-        <h6 className="regular primary">{props.subtitle}</h6>
+        {!props.loaded ? <h5 className="exo">_</h5> : <h5 className="bold">{props.title}</h5>}
+        {!props.loaded ? <h6 className="primary exo">_</h6> : <h6 className="regular primary">{props.subtitle}</h6>}
       </div>
     </div>
 
@@ -20,15 +20,9 @@ export const Card = (props) => (
         <img src={props.image} />
       </div>
       <div className="column col-s-12">
-        <p>Datum:
-          { ' ' + props.date.substring(8,10)}.
-          {props.date.substring(5,7)}.
-          {props.date.substring(0,4)}
-        </p>
-        <p>Uhrzeit:
-          {props.clock === " n.A" ? props.clock : ' ' + props.clock.substring(11,13) + ':' + props.clock.substring(14,16)}
-        </p>
-        <p>Ort: {props.ort}</p>
+        {!props.loaded ? <p className="exo">_</p> : <p>Datum:{ ' ' + props.date.substring(8,10)}.{props.date.substring(5,7)}.{props.date.substring(0,4)}</p>}
+        {!props.loaded ? <p className="exo">_</p> : <p>Uhrzeit:{props.clock === " n.A" ? props.clock : ' ' + props.clock.substring(11,13) + ':' + props.clock.substring(14,16)}</p>}
+        {!props.loaded ? <p className="exo">_</p> : <p>Ort: {props.ort}</p>}
       </div>
     </div>
 

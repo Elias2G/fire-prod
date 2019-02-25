@@ -50,6 +50,7 @@ class Einsätze extends Component {
           return (
             <div key={i} className="column col-s-12 col-md-6 col-lg-4">
               <Card
+                loaded={this.props.data.loaded.loaded.Einsätze}
                 title={data.Ausrueckungsgrund}
                 subtitle={data.Einsatzort}
                 date={data.Datum}

@@ -20,7 +20,7 @@ class Termine extends Component {
       if (i < 4) {
         return (
           <div className="column col-s-12 col-md-6">
-            <Card data={data}/>
+            <Card data={data} loaded={this.props.data.loaded.loaded.Termine}/>
           </div>
         )
       }

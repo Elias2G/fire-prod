@@ -27,7 +27,175 @@ const initState = [
   },
   {
     id: -1,
-    Datum: '2003-01-10T23:00:00.000Z',
+    Datum: '2004-01-10T23:00:00.000Z',
+    Brandeinsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Einsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Hilfe: {
+      type: 'buffer',
+      data: [1],
+    },
+    Beginn: "1899-12-30T19:50:00.000Z",
+    Ende: "1899-12-29T23:50:00.000Z",
+    Dauer: 4,
+    Ausrückungsgrund: "Wagenhüttenbrand",
+    Einsatzort: "Guttaringberg",
+  },
+  {
+    id: -1,
+    Datum: '2005-01-10T23:00:00.000Z',
+    Brandeinsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Einsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Hilfe: {
+      type: 'buffer',
+      data: [1],
+    },
+    Beginn: "1899-12-30T19:50:00.000Z",
+    Ende: "1899-12-29T23:50:00.000Z",
+    Dauer: 4,
+    Ausrückungsgrund: "Wagenhüttenbrand",
+    Einsatzort: "Guttaringberg",
+  },
+  {
+    id: -1,
+    Datum: '2006-01-10T23:00:00.000Z',
+    Brandeinsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Einsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Hilfe: {
+      type: 'buffer',
+      data: [1],
+    },
+    Beginn: "1899-12-30T19:50:00.000Z",
+    Ende: "1899-12-29T23:50:00.000Z",
+    Dauer: 4,
+    Ausrückungsgrund: "Wagenhüttenbrand",
+    Einsatzort: "Guttaringberg",
+  },
+  {
+    id: -1,
+    Datum: '2007-01-10T23:00:00.000Z',
+    Brandeinsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Einsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Hilfe: {
+      type: 'buffer',
+      data: [1],
+    },
+    Beginn: "1899-12-30T19:50:00.000Z",
+    Ende: "1899-12-29T23:50:00.000Z",
+    Dauer: 4,
+    Ausrückungsgrund: "Wagenhüttenbrand",
+    Einsatzort: "Guttaringberg",
+  },
+  {
+    id: -1,
+    Datum: '2008-01-10T23:00:00.000Z',
+    Brandeinsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Einsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Hilfe: {
+      type: 'buffer',
+      data: [1],
+    },
+    Beginn: "1899-12-30T19:50:00.000Z",
+    Ende: "1899-12-29T23:50:00.000Z",
+    Dauer: 4,
+    Ausrückungsgrund: "Wagenhüttenbrand",
+    Einsatzort: "Guttaringberg",
+  },
+  {
+    id: -1,
+    Datum: '2009-01-10T23:00:00.000Z',
+    Brandeinsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Einsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Hilfe: {
+      type: 'buffer',
+      data: [1],
+    },
+    Beginn: "1899-12-30T19:50:00.000Z",
+    Ende: "1899-12-29T23:50:00.000Z",
+    Dauer: 4,
+    Ausrückungsgrund: "Wagenhüttenbrand",
+    Einsatzort: "Guttaringberg",
+  },
+  {
+    id: -1,
+    Datum: '2010-01-10T23:00:00.000Z',
+    Brandeinsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Einsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Hilfe: {
+      type: 'buffer',
+      data: [1],
+    },
+    Beginn: "1899-12-30T19:50:00.000Z",
+    Ende: "1899-12-29T23:50:00.000Z",
+    Dauer: 4,
+    Ausrückungsgrund: "Wagenhüttenbrand",
+    Einsatzort: "Guttaringberg",
+  },
+  {
+    id: -1,
+    Datum: '2011-01-10T23:00:00.000Z',
+    Brandeinsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Einsatz: {
+      type: 'buffer',
+      data: [0],
+    },
+    Techn_Hilfe: {
+      type: 'buffer',
+      data: [1],
+    },
+    Beginn: "1899-12-30T19:50:00.000Z",
+    Ende: "1899-12-29T23:50:00.000Z",
+    Dauer: 4,
+    Ausrückungsgrund: "Wagenhüttenbrand",
+    Einsatzort: "Guttaringberg",
+  },
+  {
+    id: -1,
+    Datum: '2012-01-10T23:00:00.000Z',
     Brandeinsatz: {
       type: 'buffer',
       data: [0],
