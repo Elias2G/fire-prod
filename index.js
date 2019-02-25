@@ -13,13 +13,7 @@ var pool = mysql.createPool({
   debug: false
 });
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'client/build'), function(err) {
-    if(err) {
-      res.status(500).send(err)
-    }
-  })
-})
+
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
