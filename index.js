@@ -31,7 +31,7 @@ var aktueller_Dienstgrad = "SELECT mannschaft.`Paß-Nr`, concat(Vorname, ' ', Zu
 const handle_database =  query => (req, res) => {
   pool.getConnection(function(err, connection) {
     if(err) {
-      res.json({"code" : 100, "status" : "Error in connection database"});
+      res.json({"code" : 100, "status" : "Error in connection database", "debug" : req, res, err, connection});
       return;
     }
     console.log("connected as id " + connection.threadId);
