@@ -23,7 +23,7 @@ class Einsätze extends Component {
 
   componentDidMount() {
     if(this.props.data.loaded.loaded.Einsätze !== true) {
-      this.props.fetch('fetch_einsaetze', `${getEinsatz}`);
+      this.props.fetch('fetch_einsaetze', `${ROOT_URL}${getEinsatz}`);
     }
   }
 

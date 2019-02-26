@@ -13,6 +13,7 @@ class News extends Component {
   }
 
   renderHelper = (data) => {
+    console.log(data);
     return data.map((data,i) => {
       if(i < 4 && i !== 0) {
         return (
