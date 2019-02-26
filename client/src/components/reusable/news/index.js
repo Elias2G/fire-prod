@@ -32,7 +32,7 @@ class News extends Component {
       <div className="">
         <div className="row">
           <div className="column col-s-12 col-md-12 col-lg-6">
-            <Card data={this.props.data.news[0]} classed="big-news" />
+            <Card data={this.props.data.news[0]} classed="big-news" loaded={this.props.data.loaded.loaded.News}/>
           </div>
           <div className="column col-s-12 col-md-12 col-lg-6 nop">
             <div className="row">

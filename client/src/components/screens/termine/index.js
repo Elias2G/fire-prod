@@ -11,9 +11,10 @@ class Termine extends Component {
     reload: false,
   }
   componentDidMount() {
-    this.props.fetch('fetch_termine', `${getTermine}`);
+    this.props.fetch('fetch_termine', `${ROOT_URL}${getTermine}`);
     console.log(this.props.data.termine);
   }
+
 
   render() {
     return (

@@ -24,13 +24,12 @@ export default class Card extends Component {
     return (
       <div className="news-card shadow">
         <img className="placeholder_img"
-          src={ data.Bilderverzeichnis !== null ? data.Bilderverzeichnis.split(",") : ''}
+          src={ data.Bilderverzeichnis !== null ? data.Bilderverzeichnis.split(",") : ' '}
         />
-        <div
-          className={this.state.class}
-          >
-            <Gallery data={data} open={this.state.open} handleClick={this.handleClick}/>
+        <div className={this.state.class}>
+          { data.Bilderverzeichnis !== null ? <Gallery data={data} open={this.state.open} handleClick={this.handleClick}/> : '' }
         </div>
+
         <div className="container">
           <p className="bold">{data.Bezeichnung}</p>
           <p className="primary-light date-size">{
@@ -39,12 +38,7 @@ export default class Card extends Component {
             data.Datum.substring(0,4)
           }</p>
           <p className="container nopr nopl">
-            asdf ahahg dkj fojas asdjg asg asödhgja hashdjh ah
-            dj ahd öasdg h ajsdhg  hlasjdhgj ahd hasjdgh
-            asdf ahahg dkj fojas asdjg asg asödhgja hashdjh ah
-            dj ahd öasdg h ajsdhg  hlasjdhgj ahd hasjdgh
-            asdf ahahg dkj fojas asdjg asg asödhgja hashdjh ah
-            dj ahd öasdg h ajsdhg  hlasjdhgj ahd hasjdgh
+            {data.Bezeichnung}
           </p>
         </div>
       </div>
