@@ -52,7 +52,7 @@ export default function(state = initState, action) {
     var mannschaft = [];
 
       action.data.map((data) => {
-        console.log(data);
+
         if(data.Status !== "T" && data.Status !== "F" && data.Status !== "V") {
           mannschaft.push(data);
         }
@@ -66,6 +66,7 @@ export default function(state = initState, action) {
       var pos = 0;
 
       action.data.map(data => {
+        console.log(mannschaft);
         if(data.Status !== "F" && data.Status !== "T" && data.Status !== "V") {
           mannschaft.push(data);
         }
