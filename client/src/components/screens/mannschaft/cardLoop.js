@@ -5,8 +5,11 @@ import { determine } from '../../../redux/actions/actions';
 import MannschaftCard from './card';
 
 export default class MannschaftContainer extends Component {
+
   renderHelper = (data) => (
+
     data.map((data) => {
+      console.log(data)
       return (
         <MannschaftCard data={data}/>
       )

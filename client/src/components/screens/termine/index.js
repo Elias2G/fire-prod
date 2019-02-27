@@ -12,7 +12,6 @@ class Termine extends Component {
   }
   componentDidMount() {
     this.props.fetch('fetch_termine', `${ROOT_URL}${getTermine}`);
-    console.log(this.props.data.termine);
   }
 
 

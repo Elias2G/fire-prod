@@ -52,6 +52,7 @@ export default function(state = initState, action) {
     var mannschaft = [];
 
       action.data.map((data) => {
+        console.log(data);
         if(data.Status !== "T" && data.Status !== "F" && data.Status !== "V") {
           mannschaft.push(data);
         }
@@ -77,17 +78,17 @@ export default function(state = initState, action) {
           if(i === mannschaft.length - 1) {
 
           } else {
-            if(data.ID !== mannschaft[++i].ID) {
+            if(data.id !== mannschaft[++i].id) {
 
               for(var x = 0; x < mannschaft.length; x++) {
-                if( data.ID === mannschaft[x].ID ) {
+                if( data.id === mannschaft[x].id ) {
                   addMF.push(mannschaft[x].Bezeichnung)
                 }
               }
 
-              gesamt.push({ID: data.ID, funktionen: addMF})
+              gesamt.push({ID: data.id, funktionen: addMF})
               if(i === mannschaft.length - 1) {
-                gesamt.push({ID: mannschaft[i].ID, funktionen: addMF})
+                gesamt.push({ID: mannschaft[i].id, funktionen: addMF})
               }
 
               addMF = [];
@@ -102,11 +103,11 @@ export default function(state = initState, action) {
 
     state.map(data => {
       for(var i = 0; i < gesamt.length; i++) {
-        if(gesamt[i].ID.includes(data.ID)) {
-          if(data.ID === gesamt[i].ID) {
+        if(gesamt[i].id.includes(data.id)) {
+          if(data.id === gesamt[i].id) {
             finished.push(
               {
-                ID: data.ID,
+                ID: data.id,
                 Status: data.Status,
                 Name: data.Name,
                 Kürzel: data.Kürzel,
@@ -114,7 +115,7 @@ export default function(state = initState, action) {
                 Funktion: gesamt[i].funktionen
               }
             )
-            isThere = gesamt[i].ID;
+            isThere = gesamt[i].id;
             return;
           }
         } else {
@@ -122,10 +123,10 @@ export default function(state = initState, action) {
         }
 
       }
-      if(isThere !== data.ID) {
+      if(isThere !== data.id) {
         finished.push(
           {
-            ID: data.ID,
+            ID: data.id,
             Status: data.Status,
             Name: data.Name,
             Kürzel: data.Kürzel,

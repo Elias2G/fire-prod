@@ -17,7 +17,6 @@ export default class TermineCard extends Component{
     var time = new Date();
     var num = _.uniq(numbers);
     var array = []
-    console.log(time.getMonth() + 1);
     for ( var key in data) {
       array.push(data[key]);
     }

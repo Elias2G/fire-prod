@@ -13,7 +13,6 @@ export default class Gallery extends Component {
 
   render() {
     var { open, data } = this.props;
-    console.log(data);
       return (
         <div className={this.state.class + '-' + this.props.open}>
           <div className="gallery_close" onClick={this.props.handleClick}>

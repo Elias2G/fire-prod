@@ -10,7 +10,7 @@ import Card from './card'
 
 class EinsatzContainer extends Component {
   state = {
-    filter: 2017,
+    filter: new Date().getFullYear(),
   }
 
   // filter nach jahr function gibt einen array aus objecten zurück
@@ -47,14 +47,12 @@ class EinsatzContainer extends Component {
     return (
       array.reverse().map((data, i) => {
         var objMonth = data.Datum.substring(5,7);
-
         if( month[pos] === objMonth ) {
           return (
             <Card data={data} />
           )
         } else {
           if( month[++pos] === objMonth ) {
-            console.log(pos);
             return (
               <>
                 <h4 className="col-s-12 red-title-bg shadow">{monthName[pos]}</h4>
@@ -63,12 +61,26 @@ class EinsatzContainer extends Component {
             )
           } else {
             ++pos
-            return (
-              <>
-                <h4 className="col-s-12 red-title-bg shadow">{monthName[pos]}</h4>
-                <Card data={data} />
-              </>
-            )
+            if(objMonth !== month[pos]) {
+              for (var i = 0; i < 20; i++) {
+                ++pos
+                if( objMonth === month[pos]) {
+                  return (
+                    <>
+                      <h4 className="col-s-12 red-title-bg shadow">{monthName[pos]}</h4>
+                      <Card data={data} />
+                    </>
+                  )
+                }
+              }
+            } else {
+              return (
+                <>
+                  <h4 className="col-s-12 red-title-bg shadow">{monthName[pos]}</h4>
+                  <Card data={data} />
+                </>
+              )
+            }
           }
         }
       })

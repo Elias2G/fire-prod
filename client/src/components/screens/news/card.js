@@ -19,7 +19,6 @@ export default class Card extends Component {
   render() {
 
     var { data } = this.props;
-    console.log(data);
 
     return (
       <div className="news-card shadow">

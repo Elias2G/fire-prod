@@ -11,11 +11,10 @@ class Statistic extends Component {
     reload: false,
   }
   componentDidMount() {
-    this.props.fetch('fetch_einsaetze', `${ROOT_URL}${getEinsatz}`);
+    this.props.fetch('fetch_einsatz', `${ROOT_URL}${getEinsatz}`);
   }
 
   render() {
-    console.log(this.props.data.statistic);
     return (
       <div>
         <img className="head_image coantainer-big" />

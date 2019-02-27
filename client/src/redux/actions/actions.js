@@ -11,6 +11,7 @@ function fetch(type, url) {
   return dispatch =>
   axios.get(url)
   .then(response => {
+    console.log(dispatch(determine(type, response.data)));
     dispatch(determine(type, response.data));
   })
   .catch(e => {

@@ -23,11 +23,20 @@ class Einsätze extends Component {
 
   componentDidMount() {
     if(this.props.data.loaded.loaded.Einsätze !== true) {
-      this.props.fetch('fetch_einsaetze', `${ROOT_URL}${getEinsatz}`);
+      this.props.fetch('fetch_einsatz', `${ROOT_URL}${getEinsatz}`);
+    }
+  }
+
+  shouldComponentUpdate() {
+    if(this.props.data.loaded.loaded.Einsätze === true) {
+      return true;
+    } else {
+      return false;
     }
   }
 
   renderHelper = (data) => {
+
     return(
       data.map((data, i) => {
         if(i < 3) {
@@ -35,10 +44,10 @@ class Einsätze extends Component {
           var clock = data.Beginn;
 
           if(data.Bilderverzeichnis === null) {
-            if(data.Brandeinsatz.data[0] === 1) {
+            if(data.Brandeinsatz === 1) {
               imageArray = Brand;
             }
-            if(data.Techn_Einsatz.data[0] === 1 || data.Techn_Hilfeleistung.data[0] === 1) {
+            if(data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1) {
               imageArray = Help;
             }
           }

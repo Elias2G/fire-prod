@@ -21,7 +21,6 @@ export default class Card extends Component {
 
   render() {
     const { data } = this.props;
-    console.log(data);
     return (
       <div className="col-s-12 einsatz-card-full shadow nop">
 
@@ -84,7 +83,7 @@ export default class Card extends Component {
                   <h6>Eigene Einsatzkräfte</h6>
                   <p>Mannschaft: { data.Anzahl }</p>
                   <p>Fahrzeuge: </p>
-                  { data.TLFA2000.data[0] === 1 ? <NavLink to="/fahrzeuge"><p>TLFA2000</p></NavLink> : ''}
+                  { data.TLFA2000 === 1 ? <NavLink to="/fahrzeuge"><p>TLFA2000</p></NavLink> : ''}
                 </div>
 
               </div>
@@ -139,7 +138,6 @@ export const EinsatzSlider = (props) => {
     ]
   }
   var imageArray = props.data.split(';');
-  console.log(imageArray);
 
   var renderSlider = (data) => {
     return data.map(data => {

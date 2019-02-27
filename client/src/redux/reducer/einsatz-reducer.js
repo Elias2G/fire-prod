@@ -22,7 +22,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -43,7 +43,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -64,7 +64,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -85,7 +85,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -106,7 +106,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -127,7 +127,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -148,7 +148,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -169,7 +169,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -190,7 +190,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
   {
@@ -211,7 +211,7 @@ const initState = [
     Beginn: "1899-12-30T19:50:00.000Z",
     Ende: "1899-12-29T23:50:00.000Z",
     Dauer: 4,
-    Ausrückungsgrund: "Wagenhüttenbrand",
+    Ausrueckungsfrund: "Wagenhüttenbrand",
     Einsatzort: "Guttaringberg",
   },
 ]
@@ -221,7 +221,7 @@ const initState = [
 
 export default function(state = initState, action) {
   switch(action.type) {
-    case FETCH_EINSAETZE:
+    case 'fetch_einsatz':
       return action.data;
     default:
       return state;

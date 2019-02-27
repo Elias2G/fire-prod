@@ -32,7 +32,6 @@ class Container extends Component {
 
   loadMore = (loadedItems, data) => {
     if(++loadedItems < data.length) {
-      console.log(data.length);
       return (
         <button className="load-more" onClick={() => this.handleClick(loadedItems)}>mehr laden</button>
       )

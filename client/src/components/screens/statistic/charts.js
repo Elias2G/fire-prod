@@ -34,7 +34,6 @@ Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
 class Charts extends Component {
 
   renderHelper = (data, numbers) => {
-    console.log(Object.keys(data));
     return (
       Object.keys(data).reverse().map((year, i) => {
         const data2 = {

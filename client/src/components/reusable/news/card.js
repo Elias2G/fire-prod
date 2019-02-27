@@ -2,7 +2,6 @@ import React from 'react';
 
 export const Card = (props) => (
   <div className={"news-card shadow " + props.classed}>
-    {console.log(props)}
     <div className="row">
       <div className="column col-s-12 nop placeholder_img">
         <img className="news-image" />

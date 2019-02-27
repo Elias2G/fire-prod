@@ -18,7 +18,7 @@ const initState =
 
 export default function(state = initState, action) {
   switch(action.type) {
-    case FETCH_EINSAETZE:
+    case 'fetch_einsatz':
       return  { loaded: { ...state.loaded, Einsätze: true, Statistik: true } }
     case FETCH_NEWS:
       return  { loaded: { ...state.loaded, News: true } }

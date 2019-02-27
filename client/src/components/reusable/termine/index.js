@@ -15,6 +15,14 @@ class Termine extends Component {
     }
   }
 
+  shouldComponentUpdate() {
+    if(this.props.data.loaded.loaded.Termine === true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   renderHelper = (data) => {
     return data.map((data, i) => {
       if (i < 4) {

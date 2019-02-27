@@ -36,7 +36,6 @@ export const NewsSlider = (props) => {
     ]
   }
   var imageArray = props.data.split(',');
-  console.log(imageArray);
 
   var renderSlider = (data) => {
     return data.map(data => {

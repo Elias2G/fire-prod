@@ -21,7 +21,7 @@ const initState = [
 
 export default function(state = initState, action) {
   switch(action.type) {
-    case FETCH_EINSAETZE:
+    case 'fetch_einsatz':
 
       var year = [];
       var pos = 0;
@@ -38,8 +38,8 @@ export default function(state = initState, action) {
       var obj = {};
 
       action.data.map((data) => {
-        var brand = data.Brandeinsatz.data[0];
-        var techn = data.Techn_Einsatz.data[0] || data.Techn_Hilfeleistung.data[0];
+        var brand = data.Brandeinsatz;
+        var techn = data.Techn_Einsatz || data.Techn_Hilfeleistung;
 
         if(data.Datum.substring(0,4) == year[pos]) {
           if(brand === 1) { brandN++ }
