@@ -64,34 +64,32 @@ export default function(state = initState, action) {
       var gesamt = [];
       var addMF = [];
       var pos = 0;
-
+      console.log(action.data);
       action.data.map(data => {
-        console.log(mannschaft);
         if(data.Status !== "F" && data.Status !== "T" && data.Status !== "V") {
           mannschaft.push(data);
         }
       })
 
       mannschaft.map((data, i) => {
-        if( pos === mannschaft.length) {
+        if( i === mannschaft.length - 1) {
+          console.log('hi');
           return gesamt;
         } else {
           if(i === mannschaft.length - 1) {
 
           } else {
             if(data.id !== mannschaft[++i].id) {
-
               for(var x = 0; x < mannschaft.length; x++) {
                 if( data.id === mannschaft[x].id ) {
                   addMF.push(mannschaft[x].Bezeichnung)
                 }
               }
-
-              gesamt.push({ID: data.id, funktionen: addMF})
+              gesamt.push({id: data.id, funktionen: addMF})
               if(i === mannschaft.length - 1) {
-                gesamt.push({ID: mannschaft[i].id, funktionen: addMF})
+                gesamt.push({id: mannschaft[i].id, funktionen: addMF})
               }
-
+              ++pos
               addMF = [];
             }
           }
@@ -108,30 +106,31 @@ export default function(state = initState, action) {
           if(data.id === gesamt[i].id) {
             finished.push(
               {
-                ID: data.id,
+                id: data.id,
                 Status: data.Status,
                 Name: data.Name,
                 Kürzel: data.Kürzel,
                 Bez: data.Dienstgradbez,
-                Funktion: gesamt[i].funktionen
+                Funktion: gesamt[i].funktionen,
+                Reihung: data.Reihung,
+                img: data.Bilderverzeichnis,
               }
             )
             isThere = gesamt[i].id;
             return;
           }
-        } else {
-
         }
-
       }
       if(isThere !== data.id) {
         finished.push(
           {
-            ID: data.id,
+            id: data.id,
             Status: data.Status,
             Name: data.Name,
             Kürzel: data.Kürzel,
             Bez: data.Dienstgradbez,
+            Reihung: data.Reihung,
+            img: data.Bilderverzeichnis,
           }
         )
       }

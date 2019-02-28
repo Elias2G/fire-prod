@@ -6,19 +6,21 @@ export const Card = (props) => (
     <div className="termin-card shadow">
       <div className="row">
         <div className="column col-s-4 nop">
-          <img className="placeholder_img" />
+          <img className="placeholder_img" src={props.Bilderverzeichnis} />
         </div>
 
         <div className="column col-s-8">
           {
             !props.loaded ? <p className="exo termine"><span className="exo terminTitle">.</span><br /><span className="exo">.</span></p> :
+            <>
             <p className="termine">
               <span className="terminTitle">
                 {props.data.Bezeichnung}
               </span>
               <br/>
-              Datum: {props.data.Datum.substring(8,10)}.{props.data.Datum.substring(5,7)}.{props.data.Datum.substring(0,4)}
             </p>
+            <p className="t-pt">Datum: {props.data.Datum.substring(8,10)}.{props.data.Datum.substring(5,7)}.{props.data.Datum.substring(0,4)}</p>
+          </>
           }
         </div>
 

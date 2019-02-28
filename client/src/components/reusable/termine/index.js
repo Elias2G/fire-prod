@@ -16,7 +16,7 @@ class Termine extends Component {
   }
 
   shouldComponentUpdate() {
-    if(this.props.data.loaded.loaded.Termine === true) {
+    if(this.props.data.loaded.loaded.Termine === false) {
       return true;
     } else {
       return false;

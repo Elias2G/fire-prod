@@ -10,6 +10,9 @@ import { Card } from './card';
 import Brand from '../../images/filler/brand.jpg';
 import Help from '../../images/filler/help.jpg';
 
+import Fire from '../../images/icons/fire.svg';
+import Helper from '../../images/icons/help.svg';
+
 class Einsätze extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +31,7 @@ class Einsätze extends Component {
   }
 
   shouldComponentUpdate() {
-    if(this.props.data.loaded.loaded.Einsätze === true) {
+    if(this.props.data.loaded.loaded.Einsätze === false) {
       return true;
     } else {
       return false;
@@ -41,14 +44,20 @@ class Einsätze extends Component {
       data.map((data, i) => {
         if(i < 3) {
           var imageArray;
+          var icon;
           var clock = data.Beginn;
+          var type;
 
           if(data.Bilderverzeichnis === null) {
             if(data.Brandeinsatz === 1) {
               imageArray = Brand;
+              icon = Fire;
+              type = 'Brandeinsatz';
             }
             if(data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1) {
               imageArray = Help;
+              icon = Helper;
+              type = 'Technische Hilfeleistung'
             }
           }
 
@@ -66,6 +75,8 @@ class Einsätze extends Component {
                 clock={clock}
                 ort={data.Einsatzort}
                 image={imageArray}
+                icon={icon}
+                type={type}
               />
             </div>
           )

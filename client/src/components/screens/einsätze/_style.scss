@@ -39,7 +39,7 @@
     height: auto;
     padding: 20px;
     transition: 300ms;
-    border-top: 1px solid #ebebeb;
+    border-top: 0px solid #ebebeb;
   }
 }
 
@@ -54,7 +54,7 @@
     display: block;
     content: "+";
     position: absolute;
-    right: 0;
+    right: 25px;
     font-size: 1.2em;
     font-weight: 600;
   }
@@ -64,8 +64,43 @@
     display: block;
     content: "-";
     position: absolute;
-    right: 0;
+    right: 25px;
     font-size: 1.2em;
     font-weight: 600;
+  }
+}
+
+.e-pb {
+  padding-bottom: 15px;
+}
+
+.e-ptb-s {
+  padding-top: 8px;
+  padding-bottom: 3px;
+}
+
+.b-all {
+  border: 1px solid #ebebeb;
+}
+
+.b-r {
+  border-right: 1px solid #ebebeb;
+}
+
+.b-b {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.b-t {
+  border-top: 1px solid #ebebeb;
+}
+
+.b-l {
+  border-left: 1px solid #ebebeb;
+}
+
+.fa-link {
+  a {
+    font-size: 0.9rem;
   }
 }

@@ -24,9 +24,9 @@ export default class Card extends Component {
     return (
       <div className="col-s-12 einsatz-card-full shadow nop">
 
-        <div className="einsatz-card-title" onClick={this.handleClick}>
+        <div className="einsatz-card-title nop" onClick={this.handleClick}>
           <div className="row nop">
-            <div className="column col-s-6 col-lg-3 nop">
+            <div className="column col-s-6 col-lg-3 b-r">
               <h6 className="light">
                 {
                   data.Datum.substring(8,10) + '.' +
@@ -35,17 +35,17 @@ export default class Card extends Component {
                 }
               </h6>
             </div>
-            <div className="column col-s-6 col-lg-3 nop">
+            <div className="column col-s-6 col-lg-3 b-r">
               <h6 className="light">
-                {data.Ausrueckungsgrund}
+                {data.Brandeinsatz === 1 ? 'Brandeinsatz' : data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1 ? 'Technische Hilfeleistung' : ' '}
               </h6>
             </div>
-            <div className="column col-s-6 col-lg-3 nop">
+            <div className="column col-s-6 col-lg-3 b-r">
               <h6 className="light">
                 {data.Einsatzort}
               </h6>
             </div>
-            <div className={"column col-s-6 col-lg-3 nop justify-right " + this.state.opener}>
+            <div className={"column col-s-6 col-lg-3 justify-right " + this.state.opener}>
               <div>
                 {data.Bilderverzeichnis !== null ? <img className="image-icon" src={ImageIcon} /> : '' }
               </div>
@@ -53,16 +53,16 @@ export default class Card extends Component {
           </div>
         </div>
 
-        <div className={"einsatz-info-container " + this.state.open}>
+        <div className={"einsatz-info-container " + this.state.open + " nop"}>
           <div className="row nop">
-            <div className="column col-s-12 col-lg-6 nop">
-              <h6>Einsatzbericht</h6>
-              <p>lorem ipsum dolor sit amet</p>
+            <div className="column col-s-12 col-lg-6 b-t">
+              <h6 className="e-pb">Einsatzbericht</h6>
+              <p>{data.Ausrueckungsgrund}</p>
             </div>
             <div className="column col-s-12 col-lg-6 nop">
               <div className="row">
-                <div className="column col-md-6 nopt nopl nopr">
-                  <h6>Einsatzdaten</h6>
+                <div className="column col-md-6 b-l b-r b-t">
+                  <h6 className="e-pb">Einsatzdaten</h6>
                   <p>
                     Datum: {
                       data.Datum.substring(8,10) + '.' +
@@ -73,17 +73,18 @@ export default class Card extends Component {
                   <p>
                     Beginn:
                     {
-                      data.Beginn === null ? 'x' : data.Beginn.substring(11,16)
+                      data.Beginn === null ? 'x' : ' ' + data.Beginn.substring(11,16)
                     }
                   </p>
                   <p>Dauer: {data.Dauer} h</p>
                   <p>Ort: {data.Einsatzort}</p>
                 </div>
-                <div className="column col-md-6 nopt nopl nopr">
-                  <h6>Eigene Einsatzkräfte</h6>
+                <div className="column col-md-6 b-t">
+                  <h6 className="e-pb">Eigene Einsatzkräfte</h6>
                   <p>Mannschaft: { data.Anzahl }</p>
-                  <p>Fahrzeuge: </p>
-                  { data.TLFA2000 === 1 ? <NavLink to="/fahrzeuge"><p>TLFA2000</p></NavLink> : ''}
+                  <p className="bold e-ptb-s">Fahrzeuge: </p>
+                  <p className="fa-link">{ data.TLFA2000 === 1 ? <NavLink to="/fahrzeuge">TLFA2000</NavLink> : ''}</p>
+                  <p className="fa-link">{ data.SLF === 1 ? <NavLink to="/fahrzeuge">TLFA2000</NavLink> : ''}</p>
                 </div>
 
               </div>

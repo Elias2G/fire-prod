@@ -33,7 +33,7 @@
 
 .shadow-land {
   @include respond-to($small) {
-    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 2px 3px 6px 0px rgba(0,0,0,0.16);
   }
 }
 
@@ -52,4 +52,8 @@
   float:left;
   display:block;
   margin:10px;
+}
+
+.m-pb {
+  padding-bottom: 13px;
 }

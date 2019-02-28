@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Card = (props) => (
   <div className={"news-card shadow " + props.classed}>
@@ -15,7 +16,9 @@ export const Card = (props) => (
 
       </div>
       <div className="column col-s-5">
-        <button className="btn-pos-right"> mehr </button>
+        <NavLink to="/neuigkeiten">
+          <button className="btn-pos-right"> mehr </button>
+        </NavLink>
       </div>
     </div>
   </div>

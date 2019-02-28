@@ -6,8 +6,13 @@
   background-color: white;
   .row {
     .column {
+      img {
+        width: 100%;
+        height: auto;
+      }
       .placeholder_img {
-        height: 100px;
+        height: auto;
+        min-height: 150px;
         background-color: #2b2b2b;
       }
     }
@@ -19,11 +24,16 @@
 }
 
 .termine{
-  padding:10px;
   color: black;
 
 span{
-  font-size: 25pt;
+  font-size: 1.2rem;
   color:$color-primary-dark;
   }
+}
+
+.t-pt {
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: $color-primary;
 }

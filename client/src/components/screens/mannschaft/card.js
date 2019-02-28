@@ -27,7 +27,7 @@ export default class MannschaftCard extends Component {
   render() {
     const data = this.props.data;
     return (
-      <div className="column col-s-12 col-ms-6 col-lg-3 col-ml-4 team-card shadow index">
+      <div className="column col-s-12 col-ms-6 col-lg-3 col-ml-4 team-card shadow-land index">
         <div className="rounded-container shadow-big">
           <img className="team-img" src={data.Bildverzeichnis} />
         </div>

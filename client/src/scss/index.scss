@@ -82,3 +82,11 @@ p {
   background: $color-secondary !important;
   height: auto !important;
 }
+
+.rw-box-days {
+  flex-wrap: wrap;
+  @include respond-to($small) {
+    flex-wrap: nowrap;
+  }
+
+}
