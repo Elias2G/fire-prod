@@ -130,7 +130,7 @@ export default function(state = initState, action) {
             Kürzel: data.Kürzel,
             Bez: data.Dienstgradbez,
             Reihung: data.Reihung,
-            img: data.Bilderverzeichnis,
+            img: data.Bilderverzeichnis
           }
         )
       }
