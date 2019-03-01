@@ -136,7 +136,7 @@ export class Navigation extends Component {
               </div>
               <div className="column test">
                 <div className="desktopDown">
-                  <NavLink exact to='/einsätze' onClick={this.handleClick} activeClassName="activeLink">
+                  <NavLink exact to='/einsaetze' onClick={this.handleClick} activeClassName="activeLink">
                     <p>Einsätze</p>
                   </NavLink>
                   <div className="d-hidden shadow-big">
