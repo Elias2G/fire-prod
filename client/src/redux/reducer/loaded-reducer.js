@@ -26,6 +26,8 @@ export default function(state = initState, action) {
       return  { loaded: { ...state.loaded, Termine: true } }
     case FETCH_MANNSCHAFT_F:
       return { loaded: { ...state.loaded, Mannschaft: true } }
+    case FETCH_MANNSCHAFT_D:
+      return { loaded: { ...state.loaded, Mannschaft: true } }
     default:
       return state;
   }

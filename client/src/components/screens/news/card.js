@@ -19,18 +19,25 @@ export default class Card extends Component {
   render() {
 
     var { data } = this.props;
+    var place = [];
+    var img;
+    if(data.Bilderverzeichnis !== null ) {
+      img = data.Bilderverzeichnis.split(",");
+      place.push(img[0]);
+    }
+
 
     return (
       <div className="news-card shadow">
         <img className="placeholder_img"
-          src={ data.Bilderverzeichnis !== null ? data.Bilderverzeichnis.split(",") : ' '}
+          src={ data.Bilderverzeichnis !== null ? 'http://157.230.106.121/files/' + place : ' '}
         />
         <div className={this.state.class}>
           { data.Bilderverzeichnis !== null ? <Gallery data={data} open={this.state.open} handleClick={this.handleClick}/> : '' }
         </div>
 
         <div className="container">
-          <p className="bold">{data.Bezeichnung}</p>
+          <p className="bold">{data.Titel}</p>
           <p className="primary-light date-size">{
             data.Datum.substring(8,10) + '.' +
             data.Datum.substring(5,7) + '.' +

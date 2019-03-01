@@ -18,7 +18,8 @@ export const Card = (props) => (
 
     <div className="row middle-part">
       <div className="column col-s-12 image">
-        <img src={props.image} />
+        {props.is !== null ? <img src={"http://157.230.106.121/files/" + props.image} /> : <img src={props.image} />}
+
       </div>
       <div className="column col-s-12">
         {props.title}

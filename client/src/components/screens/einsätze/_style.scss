@@ -27,6 +27,10 @@
   padding: 20px;
   height: 100%;
 
+  .slick-slider {
+    width: 100%;
+  }
+
   &.e-closed {
     padding-top: 0px;
     padding-bottom: 0px;

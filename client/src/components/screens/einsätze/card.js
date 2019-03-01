@@ -91,8 +91,8 @@ export default class Card extends Component {
             </div>
           </div>
 
-          <div className="row nop">
-            <div className="column col-s-12 nop">
+          <div className="row nop b-t">
+            <div className="column col-s-12">
               { data.Bilderverzeichnis !== null ? <EinsatzSlider data={data.Bilderverzeichnis}/> : '' }
             </div>
           </div>
@@ -127,25 +127,26 @@ export const EinsatzSlider = (props) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          infinite: true,
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          infinite: true,
         }
       }
     ]
   }
-  var imageArray = props.data.split(';');
+  var imageArray = props.data.split(',');
 
   var renderSlider = (data) => {
+    console.log(data);
     return data.map(data => {
       return (
-        <div>
-          <img className="placeholder_img" source={data} />
-        </div>
+        <img className="test2" src={"http://157.230.106.121/files/" + data} />
       )
     })
   }

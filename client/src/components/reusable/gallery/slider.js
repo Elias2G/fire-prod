@@ -41,7 +41,7 @@ export const NewsSlider = (props) => {
     return data.map(data => {
       return (
         <div>
-          <img className="news-slider-img" source={data} />
+          <img className="news-slider-img" src={"http://157.230.106.121/files/" + data} />
         </div>
       )
     })

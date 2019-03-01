@@ -59,6 +59,19 @@ class Einsätze extends Component {
               icon = Helper;
               type = 'Technische Hilfeleistung'
             }
+          } else {
+            if(data.Brandeinsatz === 1) {
+              var img = data.Bilderverzeichnis.split(",");
+              imageArray = img[0];
+              icon = Fire;
+              type = 'Brandeinsatz';
+            }
+            if(data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1) {
+              var img = data.Bilderverzeichnis.split(",");
+              imageArray = img[0];
+              icon = Helper;
+              type = 'Technische Hilfeleistung'
+            }
           }
 
           if(data.Beginn === null) {
@@ -77,6 +90,7 @@ class Einsätze extends Component {
                 image={imageArray}
                 icon={icon}
                 type={type}
+                is={data.Bilderverzeichnis}
               />
             </div>
           )

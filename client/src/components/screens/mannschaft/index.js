@@ -11,22 +11,17 @@ import MannschaftContainer from './cardLoop';
 class Mannschaft extends Component {
   componentDidMount() {
     if(this.props.data.loaded.loaded.Mannschaft === false) {
-      this.props.fetch('fetch_mannschaft_f', `${ROOT_URL}${getFunktionen}`);
       this.props.fetch('fetch_mannschaft_d', `${ROOT_URL}${getDienstgrad}`);
+      this.props.fetch('fetch_mannschaft_f', `${ROOT_URL}${getFunktionen}`);
     }
   }
 
-  createStructure = (mannschaft) => {
-    if(this.props.data.loaded.loaded.Mannschaft === true) {
 
 
-      return;
-    }
-  }
 
   render() {
 
-    var gesamt = this.createStructure(this.props.data.mannschaft);
+
 
     return (
       <div>
