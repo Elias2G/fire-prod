@@ -68,6 +68,36 @@ app.get('/termine', (req,res) =>{
 app.get('/neuigkeiten', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
+app.get('/mannschaft', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/fahrzeuge', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/geschichte', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/einsätze', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/statistic', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/einsatzgebiet', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/kontakt', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/notruf', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/impressum', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/datenschutz', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 getApiCall(get + "einsaetze", einsätze);
 getApiCall(get + "termine", termine);
