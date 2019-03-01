@@ -22,7 +22,7 @@ export const Card = (props) => (
 
       </div>
       <div className="column col-s-12">
-        {props.title}
+        <p className="read">{props.title}</p>
       </div>
     </div>
 

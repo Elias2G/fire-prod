@@ -1,12 +1,12 @@
 // main: ../index.scss
 
 html {
-  font-size: calc(11px + 0.8vw);
+  font-size: calc(14px + 0.8vw);
   @include respond-to($medium-small) {
-    font-size: calc(12px + .64vw);
+    font-size: calc(15px + .64vw);
   };
   @include respond-to($medium) {
-    font-size: calc(14px + .4vw);
+    font-size: calc(15px + .4vw);
   };
 }
 
