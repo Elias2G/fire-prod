@@ -29,7 +29,7 @@ export default class MannschaftCard extends Component {
     return (
       <div className="column col-s-12 col-ms-6 col-lg-3 col-ml-4 team-card shadow-land index">
         <div className="rounded-container shadow-big">
-          <img className="team-img" src={"http://157.230.106.121/files/mannschaft/" + data.Bilderverzeichnis} />
+          <img className="team-img" src={"http://157.230.106.121/files/" + data.Bilderverzeichnis} />
         </div>
         <div className="container">
           <h5 className="break-all align-center">{data.Name}</h5>
