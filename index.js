@@ -62,7 +62,10 @@ const getApiCall = (api, query) => {
 }
 
 // Handles any requests that don't match the ones above
-app.get('/*', (req,res) =>{
+app.get('/termine', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+app.get('/neuigkeiten', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
