@@ -77,7 +77,7 @@ app.get('/fahrzeuge', (req,res) =>{
 app.get('/geschichte', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
-app.get('/einsätze', (req,res) =>{
+app.get('/einsaetze', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 app.get('/statistic', (req,res) =>{
