@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 
 import Map from '../../images/einsatzgebiet.jpg';
+import Ge from '../../images/headImage/Einsatzgebiete.jpg';
 
 export default class Einsatzgebiet extends Component {
+
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
+  
   render() {
     return (
       <div>
-        <img className="head_image" />
+        <img className="head_image" src={Ge}/>
           <div className="container-big">
             <h1 className="heading container-big">Einsatzgebiet</h1>
             <div className="container-big">

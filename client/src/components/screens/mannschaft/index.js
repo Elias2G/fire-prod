@@ -5,6 +5,8 @@ import { fetch, determine } from '../../../redux/actions';
 
 import { ROOT_URL, getFunktionen, getDienstgrad } from '../../../config';
 
+import MannImg from '../../images/headImage/Mannschaft.jpg';
+
 import MannschaftContainer from './cardLoop';
 
 
@@ -16,16 +18,14 @@ class Mannschaft extends Component {
     }
   }
 
-
-
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
 
   render() {
-
-
-
     return (
       <div>
-        <img className="head_image coantainer-big" />
+        <img className="head_image coantainer-big" src={MannImg} />
 
         <div className="container-big">
           <h1>Mannschaft</h1>

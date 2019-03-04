@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { Container } from './container';
 
+import Kon from '../../images/headImage/Kontakt.jpg';
+
 export default class Notruf extends Component {
+
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
+  
   render() {
     return (
       <div>
-        <img className="head_image" />
+        <img className="head_image" src={Kon}/>
           <div className="container-big">
             <h1 className="align-left heading container-big">Kontakt</h1>
 

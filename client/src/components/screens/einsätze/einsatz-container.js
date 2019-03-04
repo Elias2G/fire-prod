@@ -49,14 +49,14 @@ class EinsatzContainer extends Component {
         var objMonth = data.Datum.substring(5,7);
         if( month[pos] === objMonth ) {
           return (
-            <Card data={data} />
+            <Card data={data} filter={this.state.filter}/>
           )
         } else {
           if( month[++pos] === objMonth ) {
             return (
               <>
                 <h4 className="col-s-12 red-title-bg shadow">{monthName[pos]}</h4>
-                <Card data={data} />
+                <Card data={data} filter={this.state.filter}/>
               </>
             )
           } else {
@@ -68,7 +68,7 @@ class EinsatzContainer extends Component {
                   return (
                     <>
                       <h4 className="col-s-12 red-title-bg shadow">{monthName[pos]}</h4>
-                      <Card data={data} />
+                      <Card data={data} filter={this.state.filter}/>
                     </>
                   )
                 }
@@ -77,7 +77,7 @@ class EinsatzContainer extends Component {
               return (
                 <>
                   <h4 className="col-s-12 red-title-bg shadow">{monthName[pos]}</h4>
-                  <Card data={data} />
+                  <Card data={data} filter={this.state.filter}/>
                 </>
               )
             }

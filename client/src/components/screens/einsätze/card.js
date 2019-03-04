@@ -9,7 +9,18 @@ import ImageIcon from '../../images/icons/image-icon.jpg';
 export default class Card extends Component {
   state = {
     open: 'e-closed',
-    opener: 'opener'
+    opener: 'opener',
+    filter: this.props.filter,
+  }
+
+  componentDidUpdate() {
+    if(this.props.filter !== this.state.filter) {
+      this.setState({
+        open: 'e-closed',
+        opener: 'opener',
+        filter: this.props.filter
+      })
+    }
   }
 
   handleClick = () => {
@@ -20,6 +31,8 @@ export default class Card extends Component {
   }
 
   render() {
+
+    console.log(this.props);
     const { data } = this.props;
     return (
       <div className="col-s-12 einsatz-card-full shadow nop">
@@ -83,8 +96,8 @@ export default class Card extends Component {
                   <h6 className="e-pb">Eigene Einsatzkräfte</h6>
                   <p>Mannschaft: { data.Anzahl }</p>
                   <p className="bold e-ptb-s">Fahrzeuge: </p>
-                  <p className="fa-link">{ data.TLFA2000 === 1 ? <NavLink to="/fahrzeuge">TLFA2000</NavLink> : ''}</p>
-                  <p className="fa-link">{ data.SLF === 1 ? <NavLink to="/fahrzeuge">TLFA2000</NavLink> : ''}</p>
+                  <p className="fa-link">{ data.TLFA2000 === 1 ? <NavLink to="/fahrzeuge">TLFA 2000</NavLink> : ''}</p>
+                  <p className="fa-link">{ data.SLF === 1 ? <NavLink to="/fahrzeuge">SLF-A</NavLink> : ''}</p>
                 </div>
 
               </div>

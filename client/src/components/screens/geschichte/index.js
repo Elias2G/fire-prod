@@ -11,6 +11,10 @@ import Gallery from './gallery';
 
 export default class Geschichte extends Component {
 
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
+
   renderGallery = () => {
     var imageArray = [first, second, third, fourth, fith, sixth];
 

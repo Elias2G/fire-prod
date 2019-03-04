@@ -7,24 +7,23 @@ export default class Gallery extends Component {
 
   handleClick = () => {
     this.setState({
-      open: true,
+      open: this.state.open === false ? true : false,
     })
   }
 
   render() {
-    if(this.state.open === false){
-      return (
-        <div className="col-md-4 col-lg-3 col-s-6">
-          <img src={this.props.data} />
-        </div>
-      );
-    } else {
-      return (
-        <div className="modal">
-          <img src={this.props.data} />
-        </div>
-      );
-    }
+    return (
+      <div className="col-md-4 col-lg-3 col-s-6">
+        <img onClick={this.handleClick} src={this.props.data} />
+        {this.state.open === true ?
+          <div className="modal" onClick={this.handleClick}>
+            <div className="flexbox justify-center flex-align-center fh">
+              <img src={this.props.data} />
+            </div>
 
+          </div>
+          : ' '}
+      </div>
+    );
   }
 }

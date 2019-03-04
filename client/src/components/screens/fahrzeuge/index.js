@@ -79,6 +79,10 @@ export default class Geschichte extends Component {
     ]
   }
 
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
+
   renderHelperActive = () => {
     return this.state.active.map(data => {
       return (

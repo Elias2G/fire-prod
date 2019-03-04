@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { fetch } from '../../../redux/actions';
 import { ROOT_URL, getTermine } from '../../../config';
 
+import Ter from '../../images/headImage/Termin.jpg';
+
 import TermineCard from './card';
 
 class Termine extends Component {
@@ -13,12 +15,15 @@ class Termine extends Component {
   componentDidMount() {
     this.props.fetch('fetch_termine', `${ROOT_URL}${getTermine}`);
   }
-
+  
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
 
   render() {
     return (
       <div>
-        <img className="head_image coantainer-big" />
+        <img className="head_image coantainer-big" src={Ter}/>
 
         <div className="container-big nopb">
           <h1 className="container-big">Termine</h1>

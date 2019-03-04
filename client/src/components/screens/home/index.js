@@ -4,18 +4,24 @@ import { connect } from 'react-redux';
 import { fetch } from '../../../redux/actions';
 import { ROOT_URL, getTermine, getEinsatz, getNews } from '../../../config';
 
+import HomeImg from '../../images/headImage/Home.jpg';
+
 import Einsätze from '../../reusable/einsätze';
 import News from '../../reusable/news';
 import Termine from '../../reusable/termine';
 
 class Home extends Component {
 
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
+
   render() {
     var reversedData = this.props.data.einsätze;
 
     return (
       <div>
-        <img className="head_image coantainer-big" />
+        <img className="head_image coantainer-big" src={HomeImg} />
 
         <div className="container-big">
         <h1 className="container-big">Letzte Einsätze</h1>

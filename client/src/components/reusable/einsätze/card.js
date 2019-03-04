@@ -32,7 +32,7 @@ export const Card = (props) => (
         {!props.loaded ? <p className="exo">_</p> : <p>Uhrzeit:{props.clock === " n.A" ? props.clock : ' ' + props.clock.substring(11,13) + ':' + props.clock.substring(14,16)}</p>}
       </div>
       <div className="column col-s-6">
-        <button className="btn-pos-right"> <NavLink to="/einsätze">mehr</NavLink> </button>
+        <button className="btn-pos-right"> <NavLink to="/einsaetze">mehr</NavLink> </button>
       </div>
     </div>
   </div>

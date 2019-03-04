@@ -4,6 +4,11 @@ import React, { Component } from 'react';
 import headImage from '../.././images/headImage/head-image3.png'
 
 export default class Notruf extends Component {
+
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
+  
   render() {
     return (
       <div>

@@ -4,9 +4,16 @@ import { connect } from 'react-redux';
 import { fetch } from '../../../redux/actions';
 import { ROOT_URL, getEinsatz } from '../../../config';
 
+import Stat from '../../images/headImage/Statistik.jpg';
+
 import Charts from './charts';
 
 class Statistic extends Component {
+
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
+  
   state = {
     reload: false,
   }
@@ -17,7 +24,7 @@ class Statistic extends Component {
   render() {
     return (
       <div>
-        <img className="head_image coantainer-big" />
+        <img className="head_image coantainer-big" src={Stat}/>
 
         <div className="container-big">
           <h1 className="container-big nopb">Unsere Statistik im Überblick</h1>

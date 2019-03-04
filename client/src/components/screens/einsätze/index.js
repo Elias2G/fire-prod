@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { fetch, determine } from '../../../redux/actions';
 import { ROOT_URL, getEinsatz } from '../../../config';
 
+import Ein from '../../images/headImage/Einsätze.jpg';
+
 import EinsatzContainer from './einsatz-container';
 
 
@@ -14,10 +16,14 @@ class Einsätze extends Component {
     }
   }
 
+  componentWillMount() {
+    window.scrollTo(0,0)
+  }
+
   render() {
     return (
       <div>
-        <img className="head_image coantainer-big" />
+        <img className="head_image coantainer-big" src={Ein}/>
 
         <div className="container-big">
           <h1 className="container-big">Einsätze</h1>
