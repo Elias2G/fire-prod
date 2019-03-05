@@ -12,14 +12,6 @@ class News extends Component {
     }
   }
 
-  shouldComponentUpdate() {
-    if(this.props.data.loaded.loaded.News === true) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   renderHelper = (data) => {
     return data.map((data,i) => {
       if(i < 4 && i !== 0) {

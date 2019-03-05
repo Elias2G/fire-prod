@@ -106,7 +106,7 @@ export default class Card extends Component {
 
           <div className="row nop b-t">
             <div className="column col-s-12">
-              { data.Bilderverzeichnis !== null ? <EinsatzSlider data={data.Bilderverzeichnis}/> : '' }
+              { data.Bilderverzeichnis !== null ? <EinsatzSlider data={data.Bilderverzeichnis} /> : '' }
             </div>
           </div>
         </div>

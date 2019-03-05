@@ -16,7 +16,7 @@ export const Card = (props) => (
 
       </div>
       <div className="column col-s-5">
-        <NavLink to="/neuigkeiten">
+        <NavLink className="bt-pos-r" to="/neuigkeiten">
           <button className="btn-pos-right"> mehr </button>
         </NavLink>
       </div>
