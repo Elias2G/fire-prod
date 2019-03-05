@@ -18,6 +18,14 @@ class Mannschaft extends Component {
     }
   }
 
+  shouldComponentUpdate() {
+    if(this.props.data.loaded.loaded.Mannschaft === true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   componentWillMount() {
     window.scrollTo(0,0)
   }

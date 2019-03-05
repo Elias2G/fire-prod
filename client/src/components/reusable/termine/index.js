@@ -15,22 +15,27 @@ class Termine extends Component {
     }
   }
 
-  shouldComponentUpdate() {
-    if(this.props.data.loaded.loaded.Termine === false) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   renderHelper = (data) => {
+    var time = new Date();
+    var cut = 0;
     return data.map((data, i) => {
-      if (i < 4) {
-        return (
-          <div className="column col-s-12 col-md-6">
-            <Card data={data} loaded={this.props.data.loaded.loaded.Termine}/>
-          </div>
-        )
+      if(cut < 4) {
+        if( time.getFullYear() <= data.Datum.substring(0,4) && time.getMonth() + 1 == data.Datum.substring(5,7) && time.getDate() <= data.Datum.substring(8,10) ) {
+          cut++
+          return (
+            <div className="column col-s-12 col-md-6">
+              <Card data={data} loaded={this.props.data.loaded.loaded.Termine}/>
+            </div>
+          )
+        }
+        if( time.getFullYear() <= data.Datum.substring(0,4) && time.getMonth() + 2 <= data.Datum.substring(5,7) ) {
+          cut++
+          return (
+            <div className="column col-s-12 col-md-6">
+              <Card data={data} loaded={this.props.data.loaded.loaded.Termine}/>
+            </div>
+          )
+        }
       }
     })
   }

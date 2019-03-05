@@ -16,6 +16,14 @@ class Einsätze extends Component {
     }
   }
 
+  shouldComponentUpdate() {
+    if(this.props.data.loaded.loaded.Einsätze === true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   componentWillMount() {
     window.scrollTo(0,0)
   }

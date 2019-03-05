@@ -23,7 +23,7 @@ export class Footer extends Component{
                 <p>Sandstrasse 1</p>
                 <p>9321 Kappel am Krappfeld</p>
                 <p>Handy: 0664/32 19 337</p>
-                <p>E-Mail: <a href="mailto:thomas.koefer@aon.at"><span className="links">Thomas.koefer@aon.at</span></a></p>
+                <p>E-Mail: <a  className="st" href="mailto:thomas.koefer@aon.at"><span className="links">Thomas.koefer@aon.at</span></a></p>
               </div>
 
 
@@ -73,7 +73,7 @@ export class Footer extends Component{
 
         <div className="row bg-secondary-dark">
           <div className="column col-lg-12 container-big">
-            <p className="regular">© 2018 FF Kappel am Krapfeld • design by <a href="https://www.designintime.at"><span className="links">www.designintime.at</span></a></p>
+            <p className="regular">© 2018 FF Kappel am Krapfeld • design by <a  className="st" href="https://www.designintime.at"><span className="links">www.designintime.at</span></a></p>
           </div>
         </div>
       </div>

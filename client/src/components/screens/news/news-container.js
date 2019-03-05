@@ -39,13 +39,14 @@ class Container extends Component {
   }
 
   render() {
+    var { news } = this.props.data;
     return (
       <div className="container-big nop">
         <div className="row">
-          {this.renderHelper(this.props.itemsLoaded, this.props.data.news)}
+          {this.renderHelper(this.props.itemsLoaded, news.reverse())}
         </div>
         <div className="row">
-          {this.loadMore(this.props.itemsLoaded, this.props.data.news)}
+          {this.loadMore(this.props.itemsLoaded, news.reverse())}
         </div>
         <div></div>
       </div>

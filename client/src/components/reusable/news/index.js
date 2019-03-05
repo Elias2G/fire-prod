@@ -15,6 +15,7 @@ class News extends Component {
   renderHelper = (data) => {
     return data.map((data,i) => {
       if(i < 4 && i !== 0) {
+        console.log(data);
         return (
           <div className="column col-s-12 col-md-6 col-lg-12">
             <Card data={data} classed="small-news" loaded={this.props.data.loaded.loaded.News} />
@@ -25,13 +26,13 @@ class News extends Component {
   }
 
   render() {
-    var news = this.props.data.news;
+    var news = this.props.data.news.reverse();
 
     return (
       <div className="">
         <div className="row">
           <div className="column col-s-12 col-md-12 col-lg-6">
-            <Card data={this.props.data.news[0]} classed="big-news" loaded={this.props.data.loaded.loaded.News}/>
+            <Card data={news[0]} classed="big-news" loaded={this.props.data.loaded.loaded.News}/>
           </div>
           <div className="column col-s-12 col-md-12 col-lg-6 nop">
             <div className="row">

@@ -8,7 +8,7 @@ export default class Notruf extends Component {
   componentWillMount() {
     window.scrollTo(0,0)
   }
-  
+
   render() {
     return (
       <div>
@@ -28,7 +28,7 @@ export default class Notruf extends Component {
                     Sandstrasse 1<br />
                     9321 Kappel am Krappfeld<br />
                     Handy: 0664/32 19 337<br />
-                    E-Mail: Thomas.koefer@aon.at
+                    E-Mail: <a className="st" href="mailto:Thomas.koefer@aon.at">Thomas.koefer@aon.at</a>
                   </p>
                 </div>
               </div>
@@ -43,7 +43,7 @@ export default class Notruf extends Component {
                     Edling<br />
                     9321 Kappel am Krappfeld<br />
                     Handy: 0664/25 52 412<br />
-                    E-Mail: mogy.g@drei.at
+                    E-Mail: <a className="st" href="mailto:mogy.g@drei.at">mogy.g@drei.at</a>
                   </p>
                 </div>
               </div>

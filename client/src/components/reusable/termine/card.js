@@ -6,7 +6,12 @@ export const Card = (props) => (
     <div className="termin-card shadow">
       <div className="row">
         <div className="column col-s-4 nop">
-          <img className="placeholder_img" src={props.Bilderverzeichnis} />
+          {
+            props.data.Bilderverzeichnis !== null ?
+            <img className="placeholder_img" src={"http://157.230.106.121/files/" + props.data.Bilderverzeichnis} /> :
+            <div className="placeholder_img" ></div>
+          }
+
         </div>
 
         <div className="column col-s-8">
