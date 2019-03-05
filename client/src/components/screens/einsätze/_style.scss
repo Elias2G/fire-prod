@@ -14,8 +14,11 @@
     background-color: white;
     height: auto;
     padding: 20px;
+    transition: 200ms;
     &:hover {
       cursor: pointer;
+      background-color: #fafafa;
+      transition: 200ms;
     }
   }
 }

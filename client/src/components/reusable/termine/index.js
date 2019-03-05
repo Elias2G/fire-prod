@@ -19,11 +19,11 @@ class Termine extends Component {
     var time = new Date();
     var cut = 0;
     return data.map((data, i) => {
-      if(cut < 4) {
+      if(cut < 3) {
         if( time.getFullYear() <= data.Datum.substring(0,4) && time.getMonth() + 1 == data.Datum.substring(5,7) && time.getDate() <= data.Datum.substring(8,10) ) {
           cut++
           return (
-            <div className="column col-s-12 col-md-6">
+            <div className="column col-s-12 col-md-4">
               <Card data={data} loaded={this.props.data.loaded.loaded.Termine}/>
             </div>
           )
@@ -31,7 +31,7 @@ class Termine extends Component {
         if( time.getFullYear() <= data.Datum.substring(0,4) && time.getMonth() + 2 <= data.Datum.substring(5,7) ) {
           cut++
           return (
-            <div className="column col-s-12 col-md-6">
+            <div className="column col-s-12 col-md-4">
               <Card data={data} loaded={this.props.data.loaded.loaded.Termine}/>
             </div>
           )

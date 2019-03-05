@@ -36,7 +36,7 @@ export default class Geschichte extends Component {
             <div className="row">
 
               <div className="col-lg-12">
-                <div className="timeline-container container-middle">
+                <div className="timeline-container container-middle nop">
                   <div className="timeline-item">
                     <div className="left">
                       <p className="primary black timeline-dot">1908</p>
@@ -114,7 +114,7 @@ export default class Geschichte extends Component {
 
             <div className="container-big">
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6 nop">
                   <h6 className="regular pd shadow container bg-secondary-light">
                     Ausrüstung der Feuerwehr
                   </h6>
@@ -133,7 +133,7 @@ export default class Geschichte extends Component {
 
             <div className="row">
               <div className="col-lg-12">
-                <div className="timeline-container container-middle">
+                <div className="timeline-container container-middle nop">
                   <div className="timeline-item">
                     <div className="left">
                       <p className="primary black timeline-dot">1908</p>
@@ -195,7 +195,7 @@ export default class Geschichte extends Component {
 
             <div className="container-big">
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6 nop">
                   <h6 className="regular pd shadow container bg-secondary-light">
                     Unsere Kammeradschaft
                   </h6>

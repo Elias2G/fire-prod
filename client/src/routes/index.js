@@ -72,7 +72,7 @@ export class Navigation extends Component {
           <div className="nav-item">
             <DropDown
               data={["Einsätze", "Statistik", "Einsatzgebiet"]}
-              goTo={["/einsätze", "/statistic", "/einsatzgebiet"]}
+              goTo={["/einsaetze", "/statistic", "/einsatzgebiet"]}
               function={this.handleClick}
             />
           </div>

@@ -38,7 +38,7 @@ export default class Card extends Component {
 
         <div className="container">
           <p className="bold">{data.Titel}</p>
-          <p className="primary-light date-size">{
+          <p className="primary-light date-size-n">{
             data.Datum.substring(8,10) + '.' +
             data.Datum.substring(5,7) + '.' +
             data.Datum.substring(0,4)

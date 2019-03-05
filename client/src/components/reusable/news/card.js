@@ -16,11 +16,11 @@ export const Card = (props) => (
           {!props.loaded ? <h6 className="exo card-image-title">.</h6> : <h6 className="primary-light card-image-title">Datum: {props.data.Datum.substring(8,10)}.{props.data.Datum.substring(5,7)}.{props.data.Datum.substring(0,4)}</h6>}
         </div>
       </div>
-      <div className="column col-s-7">
+      <div className="column col-s-12 col-md-7">
         {!props.loaded ? <p className="exo">.</p> : <p>{props.data.Bezeichnung.substring(0,80)}</p>}
 
       </div>
-      <div className="column col-s-5">
+      <div className="column col-s-12 col-md-5">
         <NavLink className="bt-pos-r" to="/neuigkeiten">
           <button className="btn-pos-right"> mehr </button>
         </NavLink>

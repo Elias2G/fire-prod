@@ -5,26 +5,33 @@ export const Card = (props) => (
   <NavLink to="/termine">
     <div className="termin-card shadow">
       <div className="row">
-        <div className="column col-s-4 nop">
+        {/* <div className="column col-s-4 nop">
           {
             props.data.Bilderverzeichnis !== null ?
             <img className="placeholder_img" src={"http://157.230.106.121/files/" + props.data.Bilderverzeichnis} /> :
             <div className="placeholder_img" ></div>
           }
 
-        </div>
+        </div> */}
 
-        <div className="column col-s-8">
+        <div className="column col-s-12">
           {
             !props.loaded ? <p className="exo termine"><span className="exo terminTitle">.</span><br /><span className="exo">.</span></p> :
             <>
+
+            <div>
+              <h5 className="regular primary">
+                {props.data.Datum.substring(8,10)}.{props.data.Datum.substring(5,7)}.{props.data.Datum.substring(0,4)}
+              </h5>
+            </div>
+
             <p className="termine">
               <span className="terminTitle">
                 {props.data.Bezeichnung}
               </span>
               <br/>
             </p>
-            <p className="t-pt">Datum: {props.data.Datum.substring(8,10)}.{props.data.Datum.substring(5,7)}.{props.data.Datum.substring(0,4)}</p>
+
           </>
           }
         </div>
