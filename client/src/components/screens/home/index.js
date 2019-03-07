@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 
 import { connect } from 'react-redux';
 import { fetch } from '../../../redux/actions';
@@ -21,6 +22,13 @@ class Home extends Component {
 
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Home</title>
+          <link rel="canonical" href={ROOT_URL + '/'} />
+        </Helmet>
+
         <img className="head_image coantainer-big" src={HomeImg} />
 
         <div className="bg-secondary ">

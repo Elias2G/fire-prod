@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
 import { fetch } from '../../../redux/actions';
 import { ROOT_URL, getTermine } from '../../../config';
@@ -23,6 +24,13 @@ class Termine extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Termine</title>
+          <link rel="canonical" href={ROOT_URL + '/termine'} />
+        </Helmet>
+
         <img className="head_image coantainer-big" src={Ter}/>
 
         <div className="bg-secondary ">

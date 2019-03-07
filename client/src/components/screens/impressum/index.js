@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
+
+import { ROOT_URL } from '../../../config';
 
 import HomeImg from '../../images/headImage/Home.jpg';
 
@@ -7,6 +10,13 @@ export default class impressum extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Impressum</title>
+          <link rel="canonical" href={ROOT_URL + '/impressum'} />
+        </Helmet>
+
         <img className="head_image coantainer-big" src={HomeImg} />
 
         <div className="bg-secondary ">

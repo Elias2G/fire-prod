@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+
+import { ROOT_URL } from '../../../config';
 
 import first from '../../images/geschichte/1929.jpg';
 import second from '../../images/geschichte/ALTFeuerwehrhaus.jpg';
@@ -28,6 +31,13 @@ export default class Geschichte extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Geschichte</title>
+          <link rel="canonical" href={ROOT_URL + '/geschichte'} />
+        </Helmet>
+
         <img className="head_image" src={require('../../images/headImage/head-image2.png')} />
 
         <div className="bg-secondary ">

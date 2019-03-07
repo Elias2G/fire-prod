@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
 import { fetch, determine } from '../../../redux/actions';
 import { ROOT_URL, getEinsatz } from '../../../config';
@@ -32,6 +33,13 @@ class Einsätze extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Einsätze</title>
+          <link rel="canonical" href={ROOT_URL + '/einsaetze'} />
+        </Helmet>
+
         <img className="head_image coantainer-big" src={Ein}/>
 
         <div className="bg-secondary ">

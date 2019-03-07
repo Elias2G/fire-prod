@@ -48,7 +48,7 @@ export default class Card extends Component {
             </div>
             <div className="column col-s-6 col-lg-3 b-r">
               <h6 className="light">
-                {data.Brandeinsatz === 1 ? 'Brandeinsatz' : data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1 ? 'Technische Hilfeleistung' : ' '}
+                {data.Brandeinsatz !== 0 ? 'Brandeinsatz' : data.Techn_Einsatz !== 0 || data.Techn_Hilfeleistung !== 0 ? 'Technische Hilfeleistung' : ' '}
               </h6>
             </div>
             <div className="column col-s-6 col-lg-3 b-r">

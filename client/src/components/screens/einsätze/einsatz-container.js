@@ -47,6 +47,9 @@ class EinsatzContainer extends Component {
     return (
       array.reverse().map((data, i) => {
         var objMonth = data.Datum.substring(5,7);
+        if(data.Online === 0) {
+          return;
+        }
         if( month[pos] === objMonth ) {
           return (
             <Card data={data} filter={this.state.filter}/>

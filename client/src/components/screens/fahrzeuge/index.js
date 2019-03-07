@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Helmet } from 'react-helmet';
 //Head image
 import headImage from '../.././images/headImage/head-image.png'
 
@@ -12,6 +12,8 @@ import Fahrzeug3 from '../.././images/Fahrzeuge/AusgeschiedeneFahrzeuge/TLFA2000
 import Fahrzeug4 from '../.././images/Fahrzeuge/AusgeschiedeneFahrzeuge/Unimog.jpg'
 import Fahrzeug5 from '../.././images/Fahrzeuge/AusgeschiedeneFahrzeuge/FordFK.jpg'
 import Fahrzeug6 from '../.././images/Fahrzeuge/AusgeschiedeneFahrzeuge/Kutsche.jpg'
+
+import { ROOT_URL } from '../../../config';
 
 export default class Geschichte extends Component {
   state = {
@@ -140,6 +142,13 @@ export default class Geschichte extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Fahrzeuge</title>
+          <link rel="canonical" href={ROOT_URL + '/fahrzeuge'} />
+        </Helmet>
+
         <img className="head_image" src={headImage}/>
 
         <div className="bg-secondary ">
@@ -149,14 +158,14 @@ export default class Geschichte extends Component {
         </div>
 
           <div className="container-big">
-            <h2 className="align-center heading">Fahrzeuge</h2>
+            <h2 className="align-left heading container-big">Fahrzeuge</h2>
 
-            <h3 className="align-left heading">Aktive Fahrzeuge</h3>
+            <h3 className="align-left heading container-big">Aktive Fahrzeuge</h3>
             <div className="row">
               {this.renderHelperActive()}
             </div>
 
-            <h3 className="align-left heading">Ausgeschiedene Fahrzeuge</h3>
+            <h3 className="align-left heading container-big">Ausgeschiedene Fahrzeuge</h3>
             <div className="row">
               {this.renderHelperAway()}
             </div>

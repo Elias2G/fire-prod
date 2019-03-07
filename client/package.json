@@ -11,6 +11,7 @@
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.0",
     "react-dropdown": "^1.6.2",
+    "react-helmet": "^5.2.0",
     "react-leaflet": "^2.1.2",
     "react-open-weather": "^0.4.0",
     "react-redux": "^5.1.0",

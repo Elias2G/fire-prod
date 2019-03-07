@@ -49,24 +49,24 @@ class Einsätze extends Component {
           var type;
 
           if(data.Bilderverzeichnis === null) {
-            if(data.Brandeinsatz === 1) {
+            if(data.Brandeinsatz === 1 || data.Brandeinsatz === -1) {
               imageArray = Brand;
               icon = Fire;
               type = 'Brandeinsatz';
             }
-            if(data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1) {
+            if(data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1 || data.Techn_Einsatz === -1 || data.Techn_Hilfeleistung === -1) {
               imageArray = Help;
               icon = Helper;
               type = 'Technische Hilfeleistung'
             }
           } else {
-            if(data.Brandeinsatz === 1) {
+            if(data.Brandeinsatz === 1 || data.Brandeinsatz === -1) {
               var img = data.Bilderverzeichnis.split(",");
               imageArray = img[0];
               icon = Fire;
               type = 'Brandeinsatz';
             }
-            if(data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1) {
+            if(data.Techn_Einsatz === 1 || data.Techn_Hilfeleistung === 1 || data.Techn_Einsatz === -1 || data.Techn_Hilfeleistung === -1) {
               var img = data.Bilderverzeichnis.split(",");
               imageArray = img[0];
               icon = Helper;

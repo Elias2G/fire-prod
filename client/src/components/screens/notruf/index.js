@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+
+import { ROOT_URL } from '../../../config';
 
 //Head image
 import headImage from '../.././images/headImage/head-image3.png'
@@ -12,6 +15,13 @@ export default class Notruf extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Notruf</title>
+          <link rel="canonical" href={ROOT_URL + '/notruf'} />
+        </Helmet>
+
         <img className="head_image" src={headImage} />
 
         <div className="bg-secondary ">

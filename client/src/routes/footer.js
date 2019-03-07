@@ -66,7 +66,9 @@ export class Footer extends Component{
             <ReactWeather
               forecast="5days"
               apikey="c64e2921b4e74ed983592157190801"
-              type="auto"
+              type="geo"
+              lat="46.842785"
+              lon="14.483460"
               lang="de"/>
           </div>
         </div>

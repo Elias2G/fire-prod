@@ -29,9 +29,17 @@ export default class Card extends Component {
 
     return (
       <div className="news-card shadow">
-        <img className="placeholder_img"
-          src={ data.Bilderverzeichnis !== null ? 'http://157.230.106.121/files/' + place : ' '}
-        />
+        {
+          data.Bilderverzeichnis !== null ?
+          <div className="newsImageC">
+            <img className="newsImageG"
+              src={ data.Bilderverzeichnis !== null ? 'http://157.230.106.121/files/' + place : ' '}
+            />
+          </div>
+          : ''
+        }
+
+
         <div className={this.state.class}>
           { data.Bilderverzeichnis !== null ? <Gallery data={data} open={this.state.open} handleClick={this.handleClick}/> : '' }
         </div>

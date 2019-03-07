@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+import { ROOT_URL } from '../../../config';
 
 import Map from '../../images/einsatzgebiet.jpg';
 import Ge from '../../images/headImage/Einsatzgebiete.jpg';
@@ -12,6 +14,13 @@ export default class Einsatzgebiet extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Einsatzgebiet</title>
+          <link rel="canonical" href={ROOT_URL + '/einsatzgebiet'} />
+        </Helmet>
+
         <img className="head_image" src={Ge}/>
 
         <div className="bg-secondary ">

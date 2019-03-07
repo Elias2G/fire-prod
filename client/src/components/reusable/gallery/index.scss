@@ -13,6 +13,11 @@
       display: block;
       width: 100%;
       transition: 200ms;
+
+      &:hover {
+        color: $color-secondary;
+        transition: 200ms;
+      }
     }
   }
   &-false {

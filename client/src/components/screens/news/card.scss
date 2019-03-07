@@ -48,3 +48,15 @@
 .date-size-n {
   font-size: 1rem;
 }
+
+.newsImageC {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+
+  .newsImageG {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
 import { fetch } from '../../../redux/actions';
 import { ROOT_URL, getEinsatz } from '../../../config';
@@ -24,6 +25,13 @@ class Statistic extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Statistik</title>
+          <link rel="canonical" href={ROOT_URL + '/statistic'} />
+        </Helmet>
+
         <img className="head_image coantainer-big" src={Stat}/>
 
         <div className="bg-secondary ">

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+
+import { ROOT_URL } from '../../../config';
 
 import Container from './news-container';
 
@@ -23,6 +26,13 @@ export default class NewsPage extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Neuigkeiten</title>
+          <link rel="canonical" href={ROOT_URL + '/neuigkeiten'} />
+        </Helmet>
+
         <img className="head_image coantainer-big" src={NewsImg} />
 
         <div className="bg-secondary ">

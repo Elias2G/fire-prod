@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 
 import { fetch, determine } from '../../../redux/actions';
@@ -25,6 +26,13 @@ class Mannschaft extends Component {
   render() {
     return (
       <div>
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FF-Kappel | Mannschaft</title>
+          <link rel="canonical" href={ROOT_URL + '/mannschaft'} />
+        </Helmet>
+
         <img className="head_image coantainer-big" src={MannImg} />
 
         <div className="bg-secondary ">
@@ -34,12 +42,15 @@ class Mannschaft extends Component {
         </div>
 
         <div className="container-big">
-          <h2>Mannschaft</h2>
+          <div className="container-big">
+            <h2>Mannschaft</h2>
+          </div>
+
+          {
+            this.props.data.loaded.loaded.Mannschaft === true ? <MannschaftContainer data={this.props.data.mannschaft} /> : <div></div>
+          }
         </div>
 
-        {
-          this.props.data.loaded.loaded.Mannschaft === true ? <MannschaftContainer data={this.props.data.mannschaft} /> : <div></div>
-        }
 
       </div>
     );
