@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 const path = require('path');
 var mysql = require('mysql');
@@ -6,10 +7,10 @@ var app = express();
 
 var pool = mysql.createPool({
   connectionLimit: 100,
-  host: '157.230.106.121', //localhost
-  user: 'remote',
-  password: 'Richtig_Sicher2019',
-  database: 'ff-kappel',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_BASE,
   debug: false
 });
 
