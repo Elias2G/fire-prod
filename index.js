@@ -7,10 +7,10 @@ var app = express();
 
 var pool = mysql.createPool({
   connectionLimit: 100,
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_BASE,
+  host: '157.230.106.121',
+  user: 'remote',
+  password: 'Richtig_Sicher2019',
+  database: 'ff-kappel',
   debug: false
 });
 
