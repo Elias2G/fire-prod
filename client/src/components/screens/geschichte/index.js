@@ -30,8 +30,14 @@ export default class Geschichte extends Component {
       <div>
         <img className="head_image" src={require('../../images/headImage/head-image2.png')} />
 
+        <div className="bg-secondary ">
+          <div className="container-big nopt nopb">
+            <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
+          </div>
+        </div>
+
           <div className="container-big">
-            <h1 className="heading container-big">Geschichte der FF Kappel</h1>
+            <h2 className="heading container-big">Geschichte der FF Kappel</h2>
 
             <div className="row">
 

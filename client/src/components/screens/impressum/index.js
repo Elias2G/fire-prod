@@ -9,8 +9,14 @@ export default class impressum extends Component {
       <div>
         <img className="head_image coantainer-big" src={HomeImg} />
 
+        <div className="bg-secondary ">
+          <div className="container-big nopt nopb">
+            <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
+          </div>
+        </div>
+
         <div className="container-big">
-        <h1 className="container-big">Impressum</h1>
+        <h2 className="container-big">Impressum</h2>
 
         <div className="container-big">
           <h6>Verantwortlich für den Inhalt</h6>

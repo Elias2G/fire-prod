@@ -26,7 +26,7 @@ class News extends Component {
   }
 
   render() {
-    var news = this.props.data.news.reverse();
+    var news = this.props.data.news;
 
     return (
       <div className="">

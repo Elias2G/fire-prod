@@ -43,7 +43,7 @@ export class Navigation extends Component {
       return(
         <>
         <div className="mobile row">
-          <div className="column col-s-10"><h2>FF-Kappel</h2></div>
+          <div className="column col-s-10"><h4 className="regular">FF-Kappel</h4></div>
           <div
             className="column col-s-2 flex-algin-center justify-center nop"
             onClick={this.handleClick}

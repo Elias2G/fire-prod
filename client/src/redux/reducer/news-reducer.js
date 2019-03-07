@@ -126,7 +126,7 @@ const initState = [
 export default function(state = initState, action) {
   switch(action.type) {
     case FETCH_NEWS:
-      return action.data
+      return action.data.reverse()
     default:
       return state;
   }

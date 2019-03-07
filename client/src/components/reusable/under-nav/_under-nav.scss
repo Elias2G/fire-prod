@@ -4,6 +4,10 @@
   padding: 20px;
   padding-left: 40px;
   padding-right: 40px;
+
+  .slick-current {
+    color: $color-secondary;
+  }
 }
 
 .slick-prev:before, .slick-next:before {

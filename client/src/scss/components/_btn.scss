@@ -15,7 +15,22 @@
     margin-left: auto;
     &:hover {
       background-color: $color-secondary;
-      opacity: 0.9;
+      opacity: 0.8;
+    }
+    a {
+      color: white;
+    }
+  }
+
+  &-pos-left {
+    @extend .btn;
+    background-color: $color-secondary;
+    color: white;
+    width: 100px;
+    margin-right: auto;
+    &:hover {
+      background-color: $color-secondary;
+      opacity: 0.8;
     }
     a {
       color: white;

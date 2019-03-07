@@ -14,6 +14,7 @@ class Einsätze extends Component {
     if(this.props.data.loaded.loaded.Einsätze !== true) {
       this.props.fetch('fetch_einsatz', `${ROOT_URL}${getEinsatz}`);
     }
+    console.log(window.location);
   }
 
   shouldComponentUpdate() {
@@ -33,8 +34,14 @@ class Einsätze extends Component {
       <div>
         <img className="head_image coantainer-big" src={Ein}/>
 
+        <div className="bg-secondary ">
+          <div className="container-big nopt nopb">
+            <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
+          </div>
+        </div>
+
+
         <div className="container-big">
-          <h1 className="container-big">Einsätze</h1>
 
           <EinsatzContainer />
         </div>

@@ -37,3 +37,30 @@
   background: #2b2b2b;
   overflow: hidden;
 }
+
+.iconTermine {
+  width: auto;
+  height: 35px;
+  margin-left: auto;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.viewImageC {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999999999;
+
+  .fullImageView {
+    width: auto;
+    height: 100%;
+    max-height: 90vh;
+  }
+}

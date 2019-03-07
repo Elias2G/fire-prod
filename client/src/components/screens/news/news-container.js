@@ -43,10 +43,10 @@ class Container extends Component {
     return (
       <div className="container-big nop">
         <div className="row">
-          {this.renderHelper(this.props.itemsLoaded, news.reverse())}
+          {this.renderHelper(this.props.itemsLoaded, news)}
         </div>
         <div className="row">
-          {this.loadMore(this.props.itemsLoaded, news.reverse())}
+          {this.loadMore(this.props.itemsLoaded, news)}
         </div>
         <div></div>
       </div>

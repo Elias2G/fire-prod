@@ -141,8 +141,15 @@ export default class Geschichte extends Component {
     return (
       <div>
         <img className="head_image" src={headImage}/>
+
+        <div className="bg-secondary ">
+          <div className="container-big nopt nopb">
+            <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
+          </div>
+        </div>
+
           <div className="container-big">
-            <h1 className="align-center heading">Fahrzeuge</h1>
+            <h2 className="align-center heading">Fahrzeuge</h2>
 
             <h3 className="align-left heading">Aktive Fahrzeuge</h3>
             <div className="row">

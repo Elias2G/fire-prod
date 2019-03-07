@@ -31,8 +31,6 @@ export default class Card extends Component {
   }
 
   render() {
-
-    console.log(this.props);
     const { data } = this.props;
     return (
       <div className="col-s-12 einsatz-card-full shadow nop">
@@ -156,7 +154,6 @@ export const EinsatzSlider = (props) => {
   var imageArray = props.data.split(',');
 
   var renderSlider = (data) => {
-    console.log(data);
     return data.map(data => {
       return (
         <img className="test2" src={"http://157.230.106.121/files/" + data} />

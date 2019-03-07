@@ -8,13 +8,20 @@ export default class Einsatzgebiet extends Component {
   componentWillMount() {
     window.scrollTo(0,0)
   }
-  
+
   render() {
     return (
       <div>
         <img className="head_image" src={Ge}/>
+
+        <div className="bg-secondary ">
+          <div className="container-big nopt nopb">
+            <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
+          </div>
+        </div>
+
           <div className="container-big">
-            <h1 className="heading container-big">Einsatzgebiet</h1>
+            <h2 className="heading container-big">Einsatzgebiet</h2>
             <div className="container-big">
               <div className="row bg-secondary-light shadow">
                 <div className="column col-md-4">

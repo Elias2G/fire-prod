@@ -23,14 +23,21 @@ class Home extends Component {
       <div>
         <img className="head_image coantainer-big" src={HomeImg} />
 
+        <div className="bg-secondary ">
+          <div className="container-big nopt nopb">
+            <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
+          </div>
+        </div>
+
+
         <div className="container-big">
-        <h1 className="container-big">Letzte Einsätze</h1>
+        <h2 className="container-big">Letzte Einsätze</h2>
         <Einsätze />
 
-        <h1 className="container-big">Neuigkeiten</h1>
+        <h2 className="container-big">Neuigkeiten</h2>
         <News />
 
-        <h1 className="container-big">Termine</h1>
+        <h2 className="container-big">Termine</h2>
         <Termine />
 
         </div>

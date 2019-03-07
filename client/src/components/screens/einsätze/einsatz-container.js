@@ -101,10 +101,33 @@ class EinsatzContainer extends Component {
     var { arrayYear } = this.filterHelper(einsätze);
 
     return (
+      <>
+      <h2 className="container-big">Unsere Einsätze {this.state.filter}</h2>
+
       <div className="row container-big nopt">
         {this.renderHelper(arrayYear)}
         {this.renderPortal(einsätze, this.handleClick)}
+
+        <div className="row nop container-big">
+          <div className="col-s-6 nopl nopr flex-align-start flexbox">
+            <button
+              className="btn-pos-left btn-auto-width"
+              onClick={() => this.handleClick(this.state.filter + 1 > new Date().getFullYear() ? 2003 : this.state.filter + 1)}
+              >
+                Einsätze {this.state.filter + 1 > new Date().getFullYear() ? '2003' : this.state.filter + 1}
+              </button>
+          </div>
+          <div className="col-s-6 nopl nopr flex-align-end flexbox">
+            <button
+              className="btn-pos-right btn-auto-width"
+              onClick={() => this.handleClick(this.state.filter - 1 < 2003 ? new Date().getFullYear() : this.state.filter - 1)}
+              >
+                Einsätze {this.state.filter - 1 < 2003 ? new Date().getFullYear() : this.state.filter - 1}
+              </button>
+          </div>
+        </div>
       </div>
+      </>
     );
   }
 

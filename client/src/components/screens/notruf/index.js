@@ -8,13 +8,20 @@ export default class Notruf extends Component {
   componentWillMount() {
     window.scrollTo(0,0)
   }
-  
+
   render() {
     return (
       <div>
         <img className="head_image" src={headImage} />
+
+        <div className="bg-secondary ">
+          <div className="container-big nopt nopb">
+            <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
+          </div>
+        </div>
+
           <div className="container-big">
-            <h1 className="align-left heading container-big">Notruf!</h1>
+            <h2 className="align-left heading container-big">Notruf!</h2>
 
             <div className="row align-center">
 
