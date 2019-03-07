@@ -15,7 +15,10 @@ class Mannschaft extends Component {
   componentDidMount() {
     if(this.props.data.loaded.loaded.Mannschaft === false) {
       this.props.fetch('fetch_mannschaft_d', `${ROOT_URL}${getDienstgrad}`);
-      this.props.fetch('fetch_mannschaft_f', `${ROOT_URL}${getFunktionen}`);
+      setTimeout(() => {
+        this.props.fetch('fetch_mannschaft_f', `${ROOT_URL}${getFunktionen}`);
+      },2000)
+
     }
   }
 
