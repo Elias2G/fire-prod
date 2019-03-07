@@ -53,8 +53,11 @@
     }
   }
   p {
-    font-size: 13pt;
+    font-size: 10pt;
     color: black;
+    @include respond-to($medium) {
+      font-size: 13pt;
+    }
   }
 }
 
@@ -106,11 +109,19 @@
 
 .desktop {
   border-bottom: 1px solid #ebebeb;
-  padding-right: 100px;
+  @include respond-to($large) {
+    padding-right: 100px;
+  }
   .test {
     padding: 0px 20px 0px 20px !important;
     a p {
-      font-size: 1.3em;
+
+      @include respond-to($medium) {
+        font-size: 1.1em;
+      }
+      @include respond-to($large) {
+        font-size: 1.3em;
+      }
     }
   }
 }

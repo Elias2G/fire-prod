@@ -83,7 +83,7 @@ p {
   z-index: 9999999;
 
   @include respond-to($medium) {
-    top: 80px;
+
     z-index: 9999;
   }
   @include respond-to($medium-large) {
