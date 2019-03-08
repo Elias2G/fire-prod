@@ -107,5 +107,10 @@ getApiCall(get + "news", news);
 getApiCall(get + "dienstgrad", aktueller_Dienstgrad);
 getApiCall(get + "funktionen", akt_funktionen);
 
+
+app.use(function(err, req, res, next) {
+  res.status(404).sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
 const port = process.env.PORT || 8080;
 app.listen(port);

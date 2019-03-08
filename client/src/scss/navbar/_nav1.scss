@@ -110,7 +110,7 @@
 .desktop {
   border-bottom: 1px solid #ebebeb;
   @include respond-to($large) {
-    padding-right: 100px;
+    
   }
   .test {
     padding: 0px 20px 0px 20px !important;

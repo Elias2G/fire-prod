@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { url, urlName } from './url';
 
+import Wappen from '../components/images/logos/kappel.png';
+import Feu from '../components/images/logos/fh-logo.png';
+
 import DropDown from './dropDown.js';
 
 export class Navigation extends Component {
@@ -39,11 +42,18 @@ export class Navigation extends Component {
   }
 
   renderHelper = () => {
-    if(this.state.width < 1024) {
+    if(this.state.width < 1224) {
       return(
         <>
         <div className="mobile row">
-          <div className="column col-s-10"><h4 className="regular">FF-Kappel</h4></div>
+          <div className="column col-s-10">
+            <div className="flexbox flex-align-center">
+              <img className="logo-icon" src={Wappen} />
+              <img className="logo-icon" src={Feu} />
+              <h4 className="regular">FF-Kappel</h4>
+            </div>
+
+          </div>
           <div
             className="column col-s-2 flex-algin-center justify-center nop"
             onClick={this.handleClick}
@@ -106,9 +116,15 @@ export class Navigation extends Component {
       return(
         <>
         <div className="desktop shadow row">
-          <div className="column col-md-2"><h4 className="nb regular">FF-Kappel</h4></div>
-          <div className="column col-md-10 justify-center">
-            <div className="row justify-end">
+          <div className="column col-md-3">
+            <div className="flexbox flex-align-center">
+              <img className="logo-icon" src={Wappen} />
+              <img className="logo-icon" src={Feu} />
+              <h4 className="regular">FF-Kappel</h4>
+            </div>
+          </div>
+          <div className="column col-md-9 justify-center">
+            <div className="row flex-align-space-between">
               <div className="column test">
                 <NavLink exact to='/' onClick={this.handleClick} activeClassName="activeLink">
                   <p>Home</p>

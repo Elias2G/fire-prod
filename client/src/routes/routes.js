@@ -16,6 +16,7 @@ const Geschichte = lazy(() => import('../components/screens/geschichte'));
 const NewsPage = lazy(() => import('../components/screens/news'));
 const Impressum = lazy(() => import('../components/screens/impressum'));
 const Datenschutz = lazy(() => import('../components/screens/datenschutz'));
+const Error404 = lazy(() => import('../components/screens/error404'));
 
 
 export const Main = () => (
@@ -35,6 +36,7 @@ export const Main = () => (
         <Route exact path={'/neuigkeiten'} component={props => <NewsPage {...props} />} />
         <Route exact path={'/impressum'} component={props => <Impressum {...props} />} />
         <Route exact path={'/datenschutz'} component={props => <Datenschutz {...props} />} />
+        <Route path={'/'} component={props => <Error404 {...props} />} />
       </Switch>
     </Suspense>
   </main>

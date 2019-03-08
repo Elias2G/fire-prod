@@ -38,7 +38,7 @@ class Mannschaft extends Component {
 
         <img className="head_image coantainer-big" src={MannImg} />
 
-        <div className="bg-secondary ">
+        <div className="bg-primary-dark ">
           <div className="container-big nopt nopb">
             <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
           </div>

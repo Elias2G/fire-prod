@@ -43,6 +43,7 @@
 @import "../components/screens/geschichte/index";
 @import "../components/screens/fahrzeuge/index";
 @import "../components/screens/news/card";
+@import "../components/screens/error404/style";
 
 
 @import "~slick-carousel/slick/slick.css";
@@ -113,4 +114,15 @@ p {
 
 .mpb {
   padding-bottom: 15px;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  @include respond-to($medium-small) {
+    width: 40px;
+    height: 40px;
+  }
 }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-import { ROOT_URL } from '../../../config';
+import { ROOT_URL} from '../../../config';
 
 import HomeImg from '../../images/headImage/Home.jpg';
 
+export default class Error404 extends Component {
 
-export default class Datenschutz extends Component {
   componentWillMount() {
     window.scrollTo(0,0)
   }
@@ -17,8 +17,7 @@ export default class Datenschutz extends Component {
 
         <Helmet>
           <meta charSet="utf-8" />
-          <title>FF-Kappel | Datenschutz</title>
-          <link rel="canonical" href={ROOT_URL + '/datenschutz'} />
+          <title>FF-Kappel | Error 404</title>
         </Helmet>
 
         <img className="head_image coantainer-big" src={HomeImg} />
@@ -31,7 +30,16 @@ export default class Datenschutz extends Component {
 
 
         <div className="container-big">
-        <h2 className="container-big">Datenschutz</h2>
+          <div className="row nop">
+            <div className="col-md-4">
+              <div className="error-card shadow">
+                <h1 className="container-big regular nopb">Error 404</h1>
+                  <p className="error-subtitle b-b container-big nopt">Diese Seite existiert nicht</p>
+
+                <p className="container-big ">Oder ist greade im Einsatz</p>
+              </div>
+            </div>
+          </div>
 
 
         </div>
