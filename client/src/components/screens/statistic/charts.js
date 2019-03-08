@@ -47,9 +47,9 @@ class Charts extends Component {
         	}]
         };
 
-        return <div className="column col-s-12 col-ms-6 col-lg-4 col-ml-4 team-card shadow index">
-          <h2 className="align-center">Einsätze {year}</h2>
-          <div className="container">
+        return <div className="column col-s-12 col-ms-6 col-lg-4 col-ml-4 team-card shadow index nop">
+          <h2 className="align-center paddingtop">Einsätze {year}</h2>
+          <div className="container nop">
             <Doughnut width={200} height={100} data={data2} />
           </div>
 
