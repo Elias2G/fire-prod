@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-import { ROOT_URL} from '../../../config';
-
-import HomeImg from '../../images/headImage/Home.jpg';
+import Desk from '../../images/Desktop.svg';
+import Tab from '../../images/Tablet.svg';
+import Handy from '../../images/Handy.svg';
 
 export default class Error404 extends Component {
 
@@ -20,29 +20,12 @@ export default class Error404 extends Component {
           <title>FF-Kappel | Error 404</title>
         </Helmet>
 
-        <img className="head_image coantainer-big" src={HomeImg} />
+        {
+          window.innerWidth > 768 ? <img src={Desk} /> :
+          window.innerWidth > 360 ? <img src={Tab} /> :
+          <img src={Handy} />
+        }
 
-        <div className="bg-primary-dark ">
-          <div className="container-big nopt nopb">
-            <h3 className="headTitle regular container-big">Freiwillige Feuerwehr Kappel am Krappfeld</h3>
-          </div>
-        </div>
-
-
-        <div className="container-big">
-          <div className="row nop">
-            <div className="col-md-4">
-              <div className="error-card shadow">
-                <h1 className="container-big regular nopb">Error 404</h1>
-                  <p className="error-subtitle b-b container-big nopt">Diese Seite existiert nicht</p>
-
-                <p className="container-big ">Oder ist greade im Einsatz</p>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
       </div>
     );
   }
