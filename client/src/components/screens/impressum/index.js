@@ -34,13 +34,13 @@ export default class impressum extends Component {
             Es wird keinerlei Haftung für den Inhalt, insbesondere für die Richtigkeit, Vollständigkeit und Aktualität der Homepage und der Website übernommen. Irrtümer werden vorbehalten. Dieser Haftungsausschluss gilt auch für verlinkte Seiten.
           </p>
 
-          <h6>Firma Name</h6>
+          <h6>Freiwillige Feuerwehr Kappel</h6>
           <p className="mpb">
-            Straße <br />
-            PLZ Ort <br /><br />
-            Telefon <br />
-            E-Mail <br />
-            website <br />
+            Silberbachstraße 2 <br />
+            9321 Kappel am Krappfeld <br /><br />
+            0664 3219337 <br />
+            Thomas.koefer@aon.at<br />
+            www.ff-kappel.at <br />
           </p>
 
           <h6>Konzept, Layout und Umsetzung</h6>

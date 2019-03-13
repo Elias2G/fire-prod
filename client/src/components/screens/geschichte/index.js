@@ -21,9 +21,9 @@ export default class Geschichte extends Component {
   renderGallery = () => {
     var imageArray = [first, second, third, fourth, fith, sixth];
 
-    return imageArray.map(data => {
+    return imageArray.map((data, i) => {
       return (
-        <Gallery data={data} />
+        <Gallery key={i} data={data} />
       );
     })
   }

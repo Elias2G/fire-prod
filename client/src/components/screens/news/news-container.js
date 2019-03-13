@@ -18,7 +18,7 @@ class Container extends Component {
     return data.map((data, i) => {
       if(i < loadedItems) {
         return (
-          <div className="column col-md-4 col-lg-3">
+          <div key={i} className="column col-md-4 col-lg-3">
             <Card key={i} data={data} />
           </div>
         );

@@ -7,7 +7,7 @@ export const Card = (props) => (
     <div className="row top-part">
       <div className="column col-s-2">
         <div className="circle">
-          <img src={props.icon} />
+          <img alt="" src={props.icon} />
         </div>
       </div>
       <div className="column col-s-10">
@@ -18,7 +18,7 @@ export const Card = (props) => (
 
     <div className="row middle-part">
       <div className="column col-s-12 image">
-        {props.is !== null ? <img src={"http://157.230.106.121/files/" + props.image} /> : <img src={props.image} />}
+        {props.is !== null ? <img alt="" src={"http://157.230.106.121/files/" + props.image} /> : <img alt="" src={props.image} />}
 
       </div>
       <div className="column col-s-12">

@@ -103,6 +103,8 @@ class EinsatzContainer extends Component {
     // auszuwählen das in der state steht
     var { arrayYear } = this.filterHelper(einsätze);
 
+    var toNum = parseInt(this.state.filter, 10);
+
     return (
       <>
       <h2 className="container-big">Unsere Einsätze {this.state.filter}</h2>
@@ -115,9 +117,9 @@ class EinsatzContainer extends Component {
           <div className="col-s-6 nopl nopr flex-align-start flexbox">
             <button
               className="btn-pos-left btn-auto-width"
-              onClick={() => this.handleClick(this.state.filter + 1 > new Date().getFullYear() ? 2003 : this.state.filter + 1)}
+              onClick={() => this.handleClick(toNum + 1 > new Date().getFullYear() ? 2003 : toNum + 1)}
               >
-                Einsätze {this.state.filter + 1 > new Date().getFullYear() ? '2003' : this.state.filter + 1}
+                Einsätze {toNum + 1 > new Date().getFullYear() ? 2003 : toNum + 1}
               </button>
           </div>
           <div className="col-s-6 nopl nopr flex-align-end flexbox">

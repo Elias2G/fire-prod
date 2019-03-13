@@ -86,9 +86,9 @@ export default class Geschichte extends Component {
   }
 
   renderHelperActive = () => {
-    return this.state.active.map(data => {
+    return this.state.active.map((data, i) => {
       return (
-        <div className="column col-md-4 col-lg-3">
+        <div key={i} className="column col-md-4 col-lg-3">
           <div className="team-card nop shadow">
             <div className="car-image-container">
               <img src={data.img} />
@@ -112,9 +112,9 @@ export default class Geschichte extends Component {
     })
   }
   renderHelperAway = () => {
-    return this.state.away.map(data => {
+    return this.state.away.map((data, i) => {
       return (
-        <div className="column col-md-4 col-lg-3">
+        <div key={i} className="column col-md-4 col-lg-3">
           <div className="team-card nop shadow">
             <div className="car-image-container">
               <img src={data.img} />

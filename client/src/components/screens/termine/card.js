@@ -51,17 +51,17 @@ export default class TermineCard extends Component{
           if(i > n + this.state.cut ) { return; }
           if( time.getFullYear() + 1 == data.Datum.substring(0,4) ) {
             return(
-              <Single Bilderverzeichnis={data.Bilderverzeichnis} Datum={data.Datum} Bezeichnung={data.Bezeichnung} />
+              <Single key={i} Bilderverzeichnis={data.Bilderverzeichnis} Datum={data.Datum} Bezeichnung={data.Bezeichnung} />
             )
           }
           if( time.getFullYear() <= data.Datum.substring(0,4) && time.getMonth() + 1 == data.Datum.substring(5,7) && time.getDate() <= data.Datum.substring(8,10) ) {
             return(
-              <Single Bilderverzeichnis={data.Bilderverzeichnis} Datum={data.Datum} Bezeichnung={data.Bezeichnung} />
+              <Single key={i} Bilderverzeichnis={data.Bilderverzeichnis} Datum={data.Datum} Bezeichnung={data.Bezeichnung} />
             )
           }
           if( time.getFullYear() <= data.Datum.substring(0,4) && time.getMonth() + 2 <= data.Datum.substring(5,7) ) {
             return(
-              <Single Bilderverzeichnis={data.Bilderverzeichnis} Datum={data.Datum} Bezeichnung={data.Bezeichnung} />
+              <Single key={i} Bilderverzeichnis={data.Bilderverzeichnis} Datum={data.Datum} Bezeichnung={data.Bezeichnung} />
             )
           }
 

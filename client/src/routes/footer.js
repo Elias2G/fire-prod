@@ -75,7 +75,7 @@ export class Footer extends Component{
 
         <div className="row bg-secondary-dark">
           <div className="column col-lg-12 container-big">
-            <p className="regular">© 2018 FF Kappel am Krapfeld • design by <a  className="st" href="https://www.designintime.at"><span className="links">www.designintime.at</span></a></p>
+            <p className="regular">© 2018 FF Kappel am Krappfeld • design by <a  className="st" href="https://www.designintime.at"><span className="links">www.designintime.at</span></a></p>
           </div>
         </div>
       </div>

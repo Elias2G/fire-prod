@@ -7,7 +7,7 @@ export const Card = (props) => (
       <div className="column col-s-12 nop placeholder_img my-dark-bg">
         {
           props.data.Bilderverzeichnis !== null ?
-          <img className="news-image" src={"http://157.230.106.121/files/" + props.data.Bilderverzeichnis.split(",")[0]}/> :
+          <img alt="" className="news-image" src={"http://157.230.106.121/files/" + props.data.Bilderverzeichnis.split(",")[0]}/> :
           <div className="news-image" ></div>
         }
 

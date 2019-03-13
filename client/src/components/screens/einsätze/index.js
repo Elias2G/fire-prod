@@ -15,7 +15,6 @@ class Einsätze extends Component {
     if(this.props.data.loaded.loaded.Einsätze !== true) {
       this.props.fetch('fetch_einsatz', `${ROOT_URL}${getEinsatz}`);
     }
-    console.log(window.location);
   }
 
   shouldComponentUpdate() {

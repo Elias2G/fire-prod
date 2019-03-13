@@ -38,10 +38,10 @@ export const NewsSlider = (props) => {
   var imageArray = props.data.split(',');
 
   var renderSlider = (data) => {
-    return data.map(data => {
+    return data.map((data, i) => {
       return (
-        <div>
-          <img className="news-slider-img" src={"http://157.230.106.121/files/" + data} />
+        <div key={i}>
+          <img alt-text="Neuigkeiten Bilder" className="news-slider-img" src={"http://157.230.106.121/files/" + data} />
         </div>
       )
     })

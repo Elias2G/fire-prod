@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 function determine(type, data) {
-  console.log('isCalled: ', type);
   return {
     type,
     data

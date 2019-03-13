@@ -13,11 +13,10 @@ class News extends Component {
   }
 
   renderHelper = (data) => {
-    return data.map((data,i) => {
+    return data.map((data, i) => {
       if(i < 4 && i !== 0) {
-        console.log(data);
         return (
-          <div className="column col-s-12 col-md-6 col-lg-12">
+          <div key={i} className="column col-s-12 col-md-6 col-lg-12">
             <Card data={data} classed="small-news" loaded={this.props.data.loaded.loaded.News} />
           </div>
         )

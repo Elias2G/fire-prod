@@ -42,13 +42,18 @@ export default function(state = initState, action) {
         var techn = data.Techn_Einsatz || data.Techn_Hilfeleistung;
 
         if(data.Datum.substring(0,4) == year[pos]) {
-          if(brand === 1) { brandN++ }
-          if(techn === 1) { technN++ }
+          if(brand === 1 || brand === -1) { brandN++ }
+          if(techn === 1 || techn === -1) { technN++ }
         } else {
+
           obj = { ...obj, [year[pos].toString()]: { 'Brandeinsatz': brandN, 'Techn_Einsatz': technN, 'Gesamt': brandN + technN } }
           brandN = 0;
           technN = 0;
+          if(brand === 1 || brand === -1) { brandN++ }
+          if(techn === 1 || techn === -1) { technN++ }
           ++pos
+
+
         }
       });
       obj = { ...obj, [year[pos].toString()]: { 'Brandeinsatz': brandN, 'Techn_Einsatz': technN, 'Gesamt': brandN + technN  } }

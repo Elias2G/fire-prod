@@ -7,73 +7,72 @@ import MannschaftCard from './card';
 export default class MannschaftContainer extends Component {
 
   renderHelper = (data) => (
-    data.map((data) => {
+    data.map((data, i) => {
       if( data.Reihung <= 19 && data.Status !== 'X' && data.Status !== 'R' ) {
         return (
-          <>
-          <MannschaftCard data={data}/>
-          </>
+
+          <MannschaftCard key={i} data={data}/>
+
         )
       }
     })
   )
 
   renderHelper2 = (data) => (
-    data.map((data) => {
+    data.map((data, i) => {
       if( data.Reihung <= 29 && data.Reihung >= 20 && data.Status !== 'X' && data.Status !== 'R' ) {
         return (
-          <>
-          <MannschaftCard data={data}/>
-          </>
+          
+          <MannschaftCard key={i} data={data}/>
+
         )
       }
     })
   )
 
   renderHelper3 = (data) => (
-    data.map((data) => {
+    data.map((data, i) => {
       if( data.Reihung <= 39 && data.Reihung >= 30 && data.Status !== 'X' && data.Status !== 'R' ) {
         return (
-          <>
-          <MannschaftCard data={data}/>
-          </>
+
+          <MannschaftCard key={i} data={data}/>
+
         )
       }
     })
   )
 
   renderHelper4 = (data) => (
-    data.map((data) => {
+    data.map((data, i) => {
       if( data.Reihung <= 49 && data.Reihung >= 40 && data.Status !== 'X' && data.Status !== 'R' ) {
         return (
-          <>
-          <MannschaftCard data={data}/>
-          </>
+
+          <MannschaftCard key={i} data={data}/>
+
         )
       }
     })
   )
 
   renderHelper5 = (data) => (
-    data.map((data) => {
+    data.map((data, i) => {
       if( data.Status !== 'X' && data.Status === 'R' ) {
         return (
-          <>
-          <MannschaftCard data={data}/>
-          </>
+
+          <MannschaftCard key={i} data={data}/>
+
         )
       }
     })
   )
 
   renderHelper6 = (data) => (
-    data.map((data) => {
+    data.map((data, i) => {
       if( data.Status === 'X' && data.Status !== 'R' ) {
-        console.log(data);
         return (
-          <>
-          <MannschaftCard data={data}/>
-          </>
+
+          <MannschaftCard key={i} data={data}/>
+
         )
       }
     })
