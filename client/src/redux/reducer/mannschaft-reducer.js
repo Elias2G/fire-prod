@@ -77,11 +77,20 @@ export default function(state = initState, action) {
 
     mannschaft.map((data, i) => {
       if( i === mannschaft.length - 1) {
-        return gesamt;
+        if(data.id === mannschaft[i].id) {
+          for(var x = 0; x < mannschaft.length; x++) {
+            if( data.id === mannschaft[x].id ) {
+              addMF.push(mannschaft[x].Bezeichnung)
+            }
+          }
+          gesamt.push({id: data.id, funktionen: addMF})
+
+        }
       } else {
         if(i === mannschaft.length - 1) {
 
         } else {
+          console.log(data);
           if(data.id !== mannschaft[++i].id) {
             for(var x = 0; x < mannschaft.length; x++) {
               if( data.id === mannschaft[x].id ) {
@@ -101,6 +110,7 @@ export default function(state = initState, action) {
 
   state.map(data => {
     for(var i = 0; i < gesamt.length; i++) {
+      console.log(gesamt);
       if(gesamt[i].id.includes(data.id)) {
         if(data.id === gesamt[i].id) {
           finished.push(

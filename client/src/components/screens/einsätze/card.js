@@ -166,6 +166,28 @@ export class EinsatzSlider extends Component {
       ]
     }
 
+    if (imageArray.length < 2 ? settings = {
+      dots: false,
+      arrows: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      focusOnSelect: true,
+    } : ''
+  );
+
+  if (imageArray.length < 3 ? settings = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+  } : ''
+);
+
     return (
       <Slider {...settings} >
         {this.renderSlider(imageArray)}

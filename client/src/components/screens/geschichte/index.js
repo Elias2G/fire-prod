@@ -200,7 +200,7 @@ export default class Geschichte extends Component {
                       <div className="bg-secondary-light timeline-card shadow">
                         <h6 className="regular">Fahrzeuge</h6>
                         <p className="timeline-ab">
-                          Derzeit hat die Feuerwehr ein Schweres Löschfahrzeug, Mercedes 925 AF Atego (Bj 2005) und ein Tanklöschfahrzeug 2000, Steyr 690 (Bj 1986),
+                          Derzeit hat die Feuerwehr ein Schweres Löschfahrzeug, Mercedes 925 AF Atego (Bj 2005) und ein Tanklöschfahrzeug 2000 Mercedes 1329 / Atego Baujahr 2014,
                         </p>
                       </div>
                     </div>
