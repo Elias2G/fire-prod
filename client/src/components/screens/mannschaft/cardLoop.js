@@ -78,19 +78,25 @@ export default class MannschaftContainer extends Component {
     })
   )
 
-  renderHelper7 = (data) => (
-    data.map((data, i) => {
-      if( data.Status === 'J' && data.Status !== 'R' ) {
-        return (
+  renderHelper7 = (data) => {
+    if(data !== undefined) {
+      return data.map((data, i) => {
+        if( data.Status === 'J' && data.Status !== 'R' ) {
+          return (
 
-          <MannschaftCard key={i} data={data}/>
+            <MannschaftCard key={i} data={data}/>
 
-        )
-      }
-    })
-  )
+          )
+        }
+      })
+    }
+
+  }
 
   render() {
+    console.log(this.props.data);
+    const jugend = this.props.data.length - 1;
+    console.log(this.props.data[jugend].Jugend);
     return (
       <div>
         <div className="container-big">
@@ -132,7 +138,7 @@ export default class MannschaftContainer extends Component {
         <div className="container-big">
           <h3 className="m-pb">Jugendfeuerwehr</h3>
           <div className="row  ">
-            {this.renderHelper7(this.props.data)}
+            {this.renderHelper7(this.props.data[jugend].Jugend)}
           </div>
         </div>
       </div>

@@ -137,7 +137,7 @@ export default function(state = initState, action) {
   return finished;
 
   case 'fetch_jugend':
-  return action.data;
+  return [...state, {Jugend: action.data}]
 
     default:
       return state;
