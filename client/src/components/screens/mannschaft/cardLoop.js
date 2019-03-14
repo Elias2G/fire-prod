@@ -22,7 +22,7 @@ export default class MannschaftContainer extends Component {
     data.map((data, i) => {
       if( data.Reihung <= 29 && data.Reihung >= 20 && data.Status !== 'X' && data.Status !== 'R' ) {
         return (
-          
+
           <MannschaftCard key={i} data={data}/>
 
         )
@@ -78,6 +78,18 @@ export default class MannschaftContainer extends Component {
     })
   )
 
+  renderHelper7 = (data) => (
+    data.map((data, i) => {
+      if( data.Status === 'J' && data.Status !== 'R' ) {
+        return (
+
+          <MannschaftCard key={i} data={data}/>
+
+        )
+      }
+    })
+  )
+
   render() {
     return (
       <div>
@@ -115,6 +127,12 @@ export default class MannschaftContainer extends Component {
           <h3 className="m-pb">Altmitglieder</h3>
           <div className="row  ">
             {this.renderHelper6(this.props.data)}
+          </div>
+        </div>
+        <div className="container-big">
+          <h3 className="m-pb">Jugendfeuerwehr</h3>
+          <div className="row  ">
+            {this.renderHelper7(this.props.data)}
           </div>
         </div>
       </div>

@@ -134,12 +134,10 @@ export default function(state = initState, action) {
       )
     }
   })
+  return finished;
 
-
-
-
-
-    return finished;
+  case 'fetch_jugend':
+  return action.data;
 
     default:
       return state;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
 
@@ -11,6 +12,7 @@ export default class Card extends Component {
     open: 'e-closed',
     opener: 'opener',
     filter: this.props.filter,
+    imageO: false,
   }
 
   componentDidUpdate() {
@@ -94,8 +96,8 @@ export default class Card extends Component {
                   <h6 className="e-pb">Eigene Einsatzkräfte</h6>
                   <p>Mannschaft: { data.Anzahl }</p>
                   <p className="bold e-ptb-s">Fahrzeuge: </p>
-                  <p className="fa-link">{ data.TLFA2000 === 1 ? <NavLink to="/fahrzeuge">TLFA 2000</NavLink> : ''}</p>
-                  <p className="fa-link">{ data.SLF === 1 ? <NavLink to="/fahrzeuge">SLF-A</NavLink> : ''}</p>
+                  <p className="fa-link">{ data.TLFA2000 !== 0 ? <NavLink to="/fahrzeuge">TLFA 2000</NavLink> : ''}</p>
+                  <p className="fa-link">{ data.SLF !== 0 ? <NavLink to="/fahrzeuge">SLF-A</NavLink> : ''}</p>
                 </div>
 
               </div>
@@ -115,55 +117,96 @@ export default class Card extends Component {
   }
 }
 
-export const EinsatzSlider = (props) => {
-  var settings = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    focusOnSelect: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      }
-    ]
-  }
-  var imageArray = props.data.split(',');
+export class EinsatzSlider extends Component {
 
-  var renderSlider = (data) => {
+  renderSlider = (data) => {
     return data.map(data => {
       return (
-        <img className="test2" src={"http://157.230.106.121/files/" + data} />
+        <ImageRender data={data} />
       )
     })
   }
 
-  return (
-    <Slider {...settings} >
-      {renderSlider(imageArray)}
-    </Slider>
-  )
+  render() {
+    var imageArray = this.props.data.split(',');
+
+    var settings = {
+      dots: false,
+      arrows: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        }
+      ]
+    }
+
+    return (
+      <Slider {...settings} >
+        {this.renderSlider(imageArray)}
+      </Slider>
+    )
+  }
+}
+
+export class ImageRender extends Component {
+  state = {
+    open: false,
+  }
+
+  handleClick = () => {
+    this.setState({
+      open: this.state.open === false ? true : false,
+    })
+  }
+
+  renderPortal = () => {
+    return ReactDOM.createPortal(
+      <>
+      {this.state.open !== false ?
+        <div className="open-bg-e justify-center flex-align-center" onClick={this.handleClick}>
+
+
+            <img className="test2 open-image-e" src={"http://157.230.106.121/files/" + this.props.data} />
+
+        </div>
+      : ''}
+    </>,
+    document.getElementById('gal')
+    )
+  }
+
+  render() {
+    return(
+      <div>
+        <img onClick={this.handleClick} className="test2" src={"http://157.230.106.121/files/" + this.props.data} />
+        {this.renderPortal()}
+      </div>
+    )
+  }
 }

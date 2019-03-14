@@ -11,6 +11,7 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <div id="navPortal" className="under"></div>
+        <div id="gal"></div>
         <Main />
         <Footer />
       </div>

@@ -29,6 +29,8 @@ var akt_funktionen = "SELECT concat(Zuname, ' ', Vorname) AS Name, Funktion.Kür
 
 var aktueller_Dienstgrad = "SELECT mannschaft.`Paß-Nr` AS id, concat(Zuname, ' ', Vorname) AS Name, dienstkürzel.Kürzel, mannschaft.Bilderverzeichnis, dienstkürzel.Dienstgradbez, mannschaft.Status, dienstkürzel.Reihung, dienstgrad.Datum FROM (mannschaft INNER JOIN (dienstkürzel INNER JOIN dienstgrad ON (dienstkürzel.Kürzel = dienstgrad.Kürzel) AND (dienstkürzel.Kürzel = dienstgrad.Kürzel)) ON mannschaft.`Paß-Nr` = dienstgrad.`Paß-Nr`) INNER JOIN (SELECT dienstgrad.`Paß-Nr`, Max(dienstgrad.Datum) AS `Max von Datum` FROM mannschaft LEFT JOIN dienstgrad ON mannschaft.`Paß-Nr` = dienstgrad.`Paß-Nr` GROUP BY dienstgrad.`Paß-Nr`) akt_dienstgrad_ermitteln ON mannschaft.`Paß-Nr` = `akt_dienstgrad_ermitteln`.`Paß-Nr` GROUP BY mannschaft.`Paß-Nr`, Name, dienstkürzel.Kürzel, mannschaft.Bilderverzeichnis, dienstkürzel.Dienstgradbez, dienstgrad.Datum, mannschaft.Status, `akt_dienstgrad_ermitteln`.`Max von Datum` HAVING (((dienstgrad.Datum) = `Max von Datum`)) ORDER BY Name";
 
+var jugend = "Select concat(Zuname, ' ', Vorname) AS Name, from mannschaft HAVING (mannschaft.Status = 'J')";
+
 const handle_database =  query => (req, res) => {
   pool.getConnection(function(err, connection) {
     if(err) {
@@ -106,6 +108,8 @@ getApiCall(get + "news", news);
 
 getApiCall(get + "dienstgrad", aktueller_Dienstgrad);
 getApiCall(get + "funktionen", akt_funktionen);
+
+getApiCall(get + "jugend", jugend);
 
 
 app.use(function(err, req, res, next) {

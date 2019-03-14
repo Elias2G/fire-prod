@@ -7,6 +7,7 @@ export const getEinsatzPersonen = '/api/get/einsaetzePersonen';
 export const getTermine = '/api/get/termine';
 export const getNotruf = '/api/get/notruf';
 export const getNews = '/api/get/news';
+export const getJugend = '/api/get/jugend';
 
 export const getFunktionen = '/api/get/funktionen';
 export const getDienstgrad = '/api/get/dienstgrad';

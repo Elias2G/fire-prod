@@ -16,7 +16,7 @@ export default class Single extends Component {
 
   render() {
 
-    var { Bilderverzeichnis, Bezeichnung, Datum } = this.props;
+    var { Bilderverzeichnis, Bezeichnung, Datum, Uhrzeit } = this.props;
 
     return (
       <div className="column col-md-4 col-lg-3">
@@ -48,6 +48,9 @@ export default class Single extends Component {
 
           <div className="container">
             <p className="bold">{Bezeichnung}</p>
+            <p>
+              Um :{Uhrzeit.substring(11,16)}
+            </p>
           </div>
 
         </div>

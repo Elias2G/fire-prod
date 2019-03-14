@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { fetch, determine } from '../../../redux/actions';
 
-import { ROOT_URL, getFunktionen, getDienstgrad } from '../../../config';
+import { ROOT_URL, getFunktionen, getDienstgrad, getJugend } from '../../../config';
 
 import MannImg from '../../images/headImage/Mannschaft.jpg';
 
@@ -18,7 +18,9 @@ class Mannschaft extends Component {
       setTimeout(() => {
         this.props.fetch('fetch_mannschaft_f', `${ROOT_URL}${getFunktionen}`);
       },2000)
-
+      setTimeout(() => {
+        this.props.fetch('fetch_jugend', `${ROOT_URL}${getJugend}`);
+      },4000)
     }
   }
 
