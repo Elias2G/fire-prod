@@ -21,6 +21,7 @@ export const Card = (props) => (
             <div>
               <h5 className="regular primary">
                 {props.data.Datum.substring(8,10)}.{props.data.Datum.substring(5,7)}.{props.data.Datum.substring(0,4)}
+                { ' | ' + props.data.Uhrzeit.substring(11,16) + ' Uhr'}
               </h5>
             </div>
 
@@ -37,7 +38,7 @@ export const Card = (props) => (
               <br/>
             </p>
             <p className="regular primary">
-              Um: {props.data.Uhrzeit.substring(11,16)}
+
             </p>
           </div>
         </div>

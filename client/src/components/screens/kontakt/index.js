@@ -60,7 +60,7 @@ export default class Notruf extends Component {
                   <p className="container">
                     Edling<br />
                     9321 Kappel am Krappfeld<br />
-                    Handy: 0664/25 52 412<br />
+                    Handy: 0664/41 81 579<br />
                     E-Mail: <a className="st" href="mailto:mogy.g@drei.at">mogy.g@drei.at</a>
                   </p>
                 </div>

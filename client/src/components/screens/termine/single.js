@@ -29,6 +29,7 @@ export default class Single extends Component {
                 Datum.substring(5,7) + '.' +
                 Datum.substring(0,4)
                 }
+                 { Uhrzeit !== null ? ' | ' + Uhrzeit.substring(11,16) + ' Uhr' : ''}
               </h2>
             </div>
 
@@ -49,7 +50,7 @@ export default class Single extends Component {
           <div className="container">
             <p className="bold">{Bezeichnung}</p>
             <p>
-              Um :{Uhrzeit.substring(11,16)}
+
             </p>
           </div>
 

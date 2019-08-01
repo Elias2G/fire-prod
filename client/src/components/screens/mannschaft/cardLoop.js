@@ -124,7 +124,7 @@ export default class MannschaftContainer extends Component {
           </div>
         </div>
         <div className="container-big">
-          <h3 className="m-pb">Jungfeuerwehr</h3>
+          <h3 className="m-pb">Jugend</h3>
           <div className="row  ">
             {this.renderHelper7(this.props.data[jugend].Jugend)}
           </div>

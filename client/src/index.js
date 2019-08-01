@@ -1,3 +1,4 @@
+import 'react-app-polyfill/ie9';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './scss/index.min.css';
@@ -13,7 +14,7 @@ const store = createStore(
   rootReducer,
   compose(
     applyMiddleware(thunk),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   )
 );
 
