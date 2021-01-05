@@ -5,7 +5,7 @@
   "proxy": "http://157.230.106.121",
   "dependencies": {
     "add": "^2.0.6",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.7.3",
     "react": "^16.6.0",
     "react-app-polyfill": "^1.0.1",
